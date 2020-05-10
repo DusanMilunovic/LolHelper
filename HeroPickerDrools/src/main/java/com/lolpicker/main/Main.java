@@ -13,9 +13,11 @@ public class Main {
         KieServices ks = KieServices.Factory.get();
 	    KieContainer kContainer = ks.getKieClasspathContainer();
     	KieSession kSession = kContainer.newKieSession("ksession-rules");
-    	ChampionPick cp1 = new ChampionPick(Aatrox);
+    	ChampionPick cp1 = new ChampionPick(Aatrox, false, false);
     	kSession.insert(cp1);
     	kSession.fireAllRules();
+//    	System.out.println(cp1.getClasses().get(0));
+    	System.out.println(cp1.getStrongPoint());
 	}
 
 }

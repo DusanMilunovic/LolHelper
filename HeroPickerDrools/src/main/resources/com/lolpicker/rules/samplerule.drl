@@ -2,10 +2,3 @@ package com.lolpicker.rules;
 
 import com.lolpicker.model.ChampionPick;
 import com.lolpicker.model.Champion;
-
-rule "sample"
-	when
-		ChampionPick(champion == Champion.Aatrox)
-	then
-		System.out.println("pick");
-end
