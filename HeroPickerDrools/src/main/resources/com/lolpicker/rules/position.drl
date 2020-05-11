@@ -6,8 +6,9 @@ import com.lolpicker.model.Position;
 import com.lolpicker.model.ChampionSelect;
 
 
+
 rule "Aatrox picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Aatrox, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -19,7 +20,7 @@ salience 1
 end
 
 rule "Aatrox picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Aatrox, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -176,7 +177,7 @@ salience 1
 end
 
 rule "Ahri picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ahri, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -188,7 +189,7 @@ salience 1
 end
 
 rule "Ahri picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ahri, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -249,7 +250,7 @@ end
 
 
 rule "Akali picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Akali, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -261,7 +262,7 @@ salience 1
 end
 
 rule "Akali picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Akali, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -297,7 +298,7 @@ salience 1
 end
 
 rule "Akali picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Akali, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -309,7 +310,7 @@ salience 1
 end
 
 rule "Akali picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Akali, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -466,7 +467,7 @@ salience 1
 end
 
 rule "Alistar picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Alistar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -478,7 +479,7 @@ salience 1
 end
 
 rule "Alistar picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Alistar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -515,7 +516,7 @@ salience 1
 end
 
 rule "Amumu picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Amumu, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -527,7 +528,7 @@ salience 1
 end
 
 rule "Amumu picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Amumu, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -660,7 +661,7 @@ salience 1
 end
 
 rule "Anivia picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Anivia, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -672,7 +673,7 @@ salience 1
 end
 
 rule "Anivia picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Anivia, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -781,7 +782,7 @@ salience 1
 end
 
 rule "Annie picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Annie, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -793,7 +794,7 @@ salience 1
 end
 
 rule "Annie picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Annie, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -829,7 +830,7 @@ salience 1
 end
 
 rule "Annie picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Annie, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -841,7 +842,7 @@ salience 1
 end
 
 rule "Annie picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Annie, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -926,7 +927,7 @@ salience 1
 end
 
 rule "Aphelios picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Aphelios, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -938,7 +939,7 @@ salience 1
 end
 
 rule "Aphelios picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Aphelios, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -1047,7 +1048,7 @@ salience 1
 end
 
 rule "Ashe picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ashe, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -1059,7 +1060,7 @@ salience 1
 end
 
 rule "Ashe picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ashe, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -1144,7 +1145,7 @@ salience 1
 end
 
 rule "AurelionSol picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.AurelionSol, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -1156,7 +1157,7 @@ salience 1
 end
 
 rule "AurelionSol picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.AurelionSol, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -1265,7 +1266,7 @@ salience 1
 end
 
 rule "Azir picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Azir, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -1277,7 +1278,7 @@ salience 1
 end
 
 rule "Azir picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Azir, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -1434,7 +1435,7 @@ salience 1
 end
 
 rule "Bard picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Bard, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -1446,7 +1447,7 @@ salience 1
 end
 
 rule "Bard picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Bard, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -1555,7 +1556,7 @@ salience 1
 end
 
 rule "Blitzcrank picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Blitzcrank, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -1567,7 +1568,7 @@ salience 1
 end
 
 rule "Blitzcrank picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Blitzcrank, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -1628,7 +1629,7 @@ salience 1
 end
 
 rule "Brand picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Brand, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -1640,7 +1641,7 @@ salience 1
 end
 
 rule "Brand picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Brand, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -1676,7 +1677,7 @@ salience 1
 end
 
 rule "Brand picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Brand, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -1688,7 +1689,7 @@ salience 1
 end
 
 rule "Brand picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Brand, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -1797,7 +1798,7 @@ salience 1
 end
 
 rule "Braum picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Braum, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -1809,7 +1810,7 @@ salience 1
 end
 
 rule "Braum picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Braum, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -1894,7 +1895,7 @@ salience 1
 end
 
 rule "Caitlyn picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Caitlyn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -1906,7 +1907,7 @@ salience 1
 end
 
 rule "Caitlyn picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Caitlyn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -1943,7 +1944,7 @@ end
 
 
 rule "Camille picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Camille, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -1955,7 +1956,7 @@ salience 1
 end
 
 rule "Camille picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Camille, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -1967,7 +1968,7 @@ salience 1
 end
 
 rule "Camille picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Camille, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -1979,7 +1980,7 @@ salience 1
 end
 
 rule "Camille picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Camille, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -2064,7 +2065,7 @@ end
 
 
 rule "Cassiopeia picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Cassiopeia, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -2076,7 +2077,7 @@ salience 1
 end
 
 rule "Cassiopeia picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Cassiopeia, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -2112,7 +2113,7 @@ salience 1
 end
 
 rule "Cassiopeia picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Cassiopeia, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -2124,7 +2125,7 @@ salience 1
 end
 
 rule "Cassiopeia picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Cassiopeia, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -2185,7 +2186,7 @@ end
 
 
 rule "ChoGath picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.ChoGath, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -2197,7 +2198,7 @@ salience 1
 end
 
 rule "ChoGath picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.ChoGath, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -2233,7 +2234,7 @@ salience 1
 end
 
 rule "ChoGath picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.ChoGath, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -2245,7 +2246,7 @@ salience 1
 end
 
 rule "ChoGath picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.ChoGath, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -2354,7 +2355,7 @@ salience 1
 end
 
 rule "Corki picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Corki, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -2366,7 +2367,7 @@ salience 1
 end
 
 rule "Corki picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Corki, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -2427,7 +2428,7 @@ end
 
 
 rule "Darius picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Darius, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -2439,7 +2440,7 @@ salience 1
 end
 
 rule "Darius picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Darius, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -2572,7 +2573,7 @@ salience 1
 end
 
 rule "Diana picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Diana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -2584,7 +2585,7 @@ salience 1
 end
 
 rule "Diana picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Diana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -2596,7 +2597,7 @@ salience 1
 end
 
 rule "Diana picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Diana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -2608,7 +2609,7 @@ salience 1
 end
 
 rule "Diana picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Diana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -2669,7 +2670,7 @@ end
 
 
 rule "DrMundo picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.DrMundo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -2681,7 +2682,7 @@ salience 1
 end
 
 rule "DrMundo picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.DrMundo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -2693,7 +2694,7 @@ salience 1
 end
 
 rule "DrMundo picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.DrMundo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -2705,7 +2706,7 @@ salience 1
 end
 
 rule "DrMundo picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.DrMundo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -2862,7 +2863,7 @@ salience 1
 end
 
 rule "Draven picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Draven, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -2874,7 +2875,7 @@ salience 1
 end
 
 rule "Draven picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Draven, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -2935,7 +2936,7 @@ salience 1
 end
 
 rule "Ekko picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ekko, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -2947,7 +2948,7 @@ salience 1
 end
 
 rule "Ekko picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ekko, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -2959,7 +2960,7 @@ salience 1
 end
 
 rule "Ekko picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ekko, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -2971,7 +2972,7 @@ salience 1
 end
 
 rule "Ekko picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ekko, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -3056,7 +3057,7 @@ salience 1
 end
 
 rule "Elise picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Elise, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -3068,7 +3069,7 @@ salience 1
 end
 
 rule "Elise picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Elise, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -3177,7 +3178,7 @@ salience 1
 end
 
 rule "Evelynn picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Evelynn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -3189,7 +3190,7 @@ salience 1
 end
 
 rule "Evelynn picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Evelynn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -3322,7 +3323,7 @@ salience 1
 end
 
 rule "Ezreal picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ezreal, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -3334,7 +3335,7 @@ salience 1
 end
 
 rule "Ezreal picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ezreal, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -3346,7 +3347,7 @@ salience 1
 end
 
 rule "Ezreal picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ezreal, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -3358,7 +3359,7 @@ salience 1
 end
 
 rule "Ezreal picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ezreal, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -3419,7 +3420,7 @@ salience 1
 end
 
 rule "Fiddlesticks picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Fiddlesticks, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -3431,7 +3432,7 @@ salience 1
 end
 
 rule "Fiddlesticks picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Fiddlesticks, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -3491,7 +3492,7 @@ salience 1
 end
 
 rule "Fiddlesticks picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Fiddlesticks, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -3503,7 +3504,7 @@ salience 1
 end
 
 rule "Fiddlesticks picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Fiddlesticks, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -3516,7 +3517,7 @@ end
 
 
 rule "Fiora picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Fiora, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -3528,7 +3529,7 @@ salience 1
 end
 
 rule "Fiora picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Fiora, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -3685,7 +3686,7 @@ salience 1
 end
 
 rule "Fizz picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Fizz, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -3697,7 +3698,7 @@ salience 1
 end
 
 rule "Fizz picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Fizz, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -3806,7 +3807,7 @@ salience 1
 end
 
 rule "Galio picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Galio, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -3818,7 +3819,7 @@ salience 1
 end
 
 rule "Galio picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Galio, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -3854,7 +3855,7 @@ salience 1
 end
 
 rule "Galio picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Galio, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -3866,7 +3867,7 @@ salience 1
 end
 
 rule "Galio picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Galio, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -3879,7 +3880,7 @@ end
 
 
 rule "Gangplank picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gangplank, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -3891,7 +3892,7 @@ salience 1
 end
 
 rule "Gangplank picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gangplank, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4000,7 +4001,7 @@ end
 
 
 rule "Garen picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Garen, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -4012,7 +4013,7 @@ salience 1
 end
 
 rule "Garen picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Garen, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4121,7 +4122,7 @@ end
 
 
 rule "Gnar picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gnar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -4133,7 +4134,7 @@ salience 1
 end
 
 rule "Gnar picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gnar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4266,7 +4267,7 @@ salience 1
 end
 
 rule "Gragas picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gragas, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -4278,7 +4279,7 @@ salience 1
 end
 
 rule "Gragas picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Gragas, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -4387,7 +4388,7 @@ salience 1
 end
 
 rule "Graves picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Graves, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -4399,7 +4400,7 @@ salience 1
 end
 
 rule "Graves picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Graves, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -4411,7 +4412,7 @@ salience 1
 end
 
 rule "Graves picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Graves, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -4423,7 +4424,7 @@ salience 1
 end
 
 rule "Graves picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Graves, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -4508,7 +4509,7 @@ salience 1
 end
 
 rule "Hecarim picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Hecarim, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -4520,7 +4521,7 @@ salience 1
 end
 
 rule "Hecarim picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Hecarim, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -4605,7 +4606,7 @@ end
 
 
 rule "Heimerdinger picked, friend team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -4617,7 +4618,7 @@ salience 1
 end
 
 rule "Heimerdinger picked, enemy team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4653,7 +4654,7 @@ salience 1
 end
 
 rule "Heimerdinger picked, friend team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -4665,7 +4666,7 @@ salience 1
 end
 
 rule "Heimerdinger picked, enemy team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -4677,7 +4678,7 @@ salience 1
 end
 
 rule "Heimerdinger picked, friend team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -4689,7 +4690,7 @@ salience 1
 end
 
 rule "Heimerdinger picked, enemy team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Heimerdinger, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -4726,7 +4727,7 @@ end
 
 
 rule "Illaoi picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Illaoi, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -4738,7 +4739,7 @@ salience 1
 end
 
 rule "Illaoi picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Illaoi, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4847,7 +4848,7 @@ end
 
 
 rule "Irelia picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Irelia, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -4859,7 +4860,7 @@ salience 1
 end
 
 rule "Irelia picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Irelia, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -4895,7 +4896,7 @@ salience 1
 end
 
 rule "Irelia picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Irelia, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -4907,7 +4908,7 @@ salience 1
 end
 
 rule "Irelia picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Irelia, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -4992,7 +4993,7 @@ salience 1
 end
 
 rule "Ivern picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ivern, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -5004,7 +5005,7 @@ salience 1
 end
 
 rule "Ivern picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Ivern, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -5185,7 +5186,7 @@ salience 1
 end
 
 rule "Janna picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Janna, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -5197,7 +5198,7 @@ salience 1
 end
 
 rule "Janna picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Janna, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -5210,7 +5211,7 @@ end
 
 
 rule "JarvanIV picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.JarvanIV, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -5222,7 +5223,7 @@ salience 1
 end
 
 rule "JarvanIV picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.JarvanIV, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -5234,7 +5235,7 @@ salience 1
 end
 
 rule "JarvanIV picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.JarvanIV, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -5246,7 +5247,7 @@ salience 1
 end
 
 rule "JarvanIV picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.JarvanIV, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -5331,7 +5332,7 @@ end
 
 
 rule "Jax picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Jax, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -5343,7 +5344,7 @@ salience 1
 end
 
 rule "Jax picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Jax, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -5355,7 +5356,7 @@ salience 1
 end
 
 rule "Jax picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Jax, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -5367,7 +5368,7 @@ salience 1
 end
 
 rule "Jax picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Jax, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -5452,7 +5453,7 @@ end
 
 
 rule "Jayce picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jayce, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -5464,7 +5465,7 @@ salience 1
 end
 
 rule "Jayce picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jayce, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -5645,7 +5646,7 @@ salience 1
 end
 
 rule "Jhin picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jhin, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -5657,7 +5658,7 @@ salience 1
 end
 
 rule "Jhin picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jhin, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -5766,7 +5767,7 @@ salience 1
 end
 
 rule "Jinx picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jinx, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -5778,7 +5779,7 @@ salience 1
 end
 
 rule "Jinx picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Jinx, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -5863,7 +5864,7 @@ salience 1
 end
 
 rule "KaiSa picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.KaiSa, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -5875,7 +5876,7 @@ salience 1
 end
 
 rule "KaiSa picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.KaiSa, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -5887,7 +5888,7 @@ salience 1
 end
 
 rule "KaiSa picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.KaiSa, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -5899,7 +5900,7 @@ salience 1
 end
 
 rule "KaiSa picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.KaiSa, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -5936,7 +5937,7 @@ end
 
 
 rule "Kalista picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kalista, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -5948,7 +5949,7 @@ salience 1
 end
 
 rule "Kalista picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kalista, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -6008,7 +6009,7 @@ salience 1
 end
 
 rule "Kalista picked, friend team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kalista, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -6020,7 +6021,7 @@ salience 1
 end
 
 rule "Kalista picked, enemy team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kalista, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -6057,7 +6058,7 @@ end
 
 
 rule "Karma picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Karma, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -6069,7 +6070,7 @@ salience 1
 end
 
 rule "Karma picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Karma, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -6153,7 +6154,7 @@ salience 1
 end
 
 rule "Karma picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Karma, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -6165,7 +6166,7 @@ salience 1
 end
 
 rule "Karma picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Karma, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -6202,7 +6203,7 @@ salience 1
 end
 
 rule "Karthus picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Karthus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -6214,7 +6215,7 @@ salience 1
 end
 
 rule "Karthus picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Karthus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -6226,7 +6227,7 @@ salience 1
 end
 
 rule "Karthus picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Karthus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -6238,7 +6239,7 @@ salience 1
 end
 
 rule "Karthus picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Karthus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -6347,7 +6348,7 @@ salience 1
 end
 
 rule "Kassadin picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kassadin, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -6359,7 +6360,7 @@ salience 1
 end
 
 rule "Kassadin picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kassadin, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -6468,7 +6469,7 @@ salience 1
 end
 
 rule "Katarina picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Katarina, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -6480,7 +6481,7 @@ salience 1
 end
 
 rule "Katarina picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Katarina, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -6541,7 +6542,7 @@ end
 
 
 rule "Kayle picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kayle, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -6553,7 +6554,7 @@ salience 1
 end
 
 rule "Kayle picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kayle, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -6589,7 +6590,7 @@ salience 1
 end
 
 rule "Kayle picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kayle, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -6601,7 +6602,7 @@ salience 1
 end
 
 rule "Kayle picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kayle, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -6686,7 +6687,7 @@ salience 1
 end
 
 rule "Kayn picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kayn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -6698,7 +6699,7 @@ salience 1
 end
 
 rule "Kayn picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Kayn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -6710,7 +6711,7 @@ salience 1
 end
 
 rule "Kayn picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kayn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -6722,7 +6723,7 @@ salience 1
 end
 
 rule "Kayn picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Kayn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -6783,7 +6784,7 @@ end
 
 
 rule "Kennen picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kennen, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -6795,7 +6796,7 @@ salience 1
 end
 
 rule "Kennen picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kennen, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -6928,7 +6929,7 @@ salience 1
 end
 
 rule "KhaZix picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.KhaZix, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -6940,7 +6941,7 @@ salience 1
 end
 
 rule "KhaZix picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.KhaZix, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -7049,7 +7050,7 @@ salience 1
 end
 
 rule "Kindred picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kindred, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -7061,7 +7062,7 @@ salience 1
 end
 
 rule "Kindred picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kindred, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -7146,7 +7147,7 @@ end
 
 
 rule "Kled picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kled, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -7158,7 +7159,7 @@ salience 1
 end
 
 rule "Kled picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Kled, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -7339,7 +7340,7 @@ salience 1
 end
 
 rule "KogMaw picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.KogMaw, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -7351,7 +7352,7 @@ salience 1
 end
 
 rule "KogMaw picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.KogMaw, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -7436,7 +7437,7 @@ salience 1
 end
 
 rule "LeBlanc picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.LeBlanc, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -7448,7 +7449,7 @@ salience 1
 end
 
 rule "LeBlanc picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.LeBlanc, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -7533,7 +7534,7 @@ salience 1
 end
 
 rule "LeeSin picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.LeeSin, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -7545,7 +7546,7 @@ salience 1
 end
 
 rule "LeeSin picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.LeeSin, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -7726,7 +7727,7 @@ salience 1
 end
 
 rule "Leona picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Leona, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -7738,7 +7739,7 @@ salience 1
 end
 
 rule "Leona picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Leona, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -7751,7 +7752,7 @@ end
 
 
 rule "Lissandra picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Lissandra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -7763,7 +7764,7 @@ salience 1
 end
 
 rule "Lissandra picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Lissandra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -7799,7 +7800,7 @@ salience 1
 end
 
 rule "Lissandra picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Lissandra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -7811,7 +7812,7 @@ salience 1
 end
 
 rule "Lissandra picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Lissandra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -7872,7 +7873,7 @@ end
 
 
 rule "Lucian picked, friend team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -7884,7 +7885,7 @@ salience 1
 end
 
 rule "Lucian picked, enemy team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -7920,7 +7921,7 @@ salience 1
 end
 
 rule "Lucian picked, friend team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -7932,7 +7933,7 @@ salience 1
 end
 
 rule "Lucian picked, enemy team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -7944,7 +7945,7 @@ salience 1
 end
 
 rule "Lucian picked, friend team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -7956,7 +7957,7 @@ salience 1
 end
 
 rule "Lucian picked, enemy team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Lucian, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -8089,7 +8090,7 @@ salience 1
 end
 
 rule "Lulu picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Lulu, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -8101,7 +8102,7 @@ salience 1
 end
 
 rule "Lulu picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Lulu, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -8162,7 +8163,7 @@ salience 1
 end
 
 rule "Lux picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Lux, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -8174,7 +8175,7 @@ salience 1
 end
 
 rule "Lux picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Lux, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -8210,7 +8211,7 @@ salience 1
 end
 
 rule "Lux picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Lux, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -8222,7 +8223,7 @@ salience 1
 end
 
 rule "Lux picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Lux, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -8235,7 +8236,7 @@ end
 
 
 rule "Malphite picked, friend team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -8247,7 +8248,7 @@ salience 1
 end
 
 rule "Malphite picked, enemy team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -8259,7 +8260,7 @@ salience 1
 end
 
 rule "Malphite picked, friend team, position jungle"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -8271,7 +8272,7 @@ salience 1
 end
 
 rule "Malphite picked, enemy team, position jungle"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -8331,7 +8332,7 @@ salience 1
 end
 
 rule "Malphite picked, friend team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -8343,7 +8344,7 @@ salience 1
 end
 
 rule "Malphite picked, enemy team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Malphite, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -8404,7 +8405,7 @@ salience 1
 end
 
 rule "Malzahar picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Malzahar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -8416,7 +8417,7 @@ salience 1
 end
 
 rule "Malzahar picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Malzahar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -8477,7 +8478,7 @@ end
 
 
 rule "Maokai picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Maokai, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -8489,7 +8490,7 @@ salience 1
 end
 
 rule "Maokai picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Maokai, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -8622,7 +8623,7 @@ salience 1
 end
 
 rule "MasterYi picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.MasterYi, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -8634,7 +8635,7 @@ salience 1
 end
 
 rule "MasterYi picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.MasterYi, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -8791,7 +8792,7 @@ salience 1
 end
 
 rule "MissFortune picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.MissFortune, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -8803,7 +8804,7 @@ salience 1
 end
 
 rule "MissFortune picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.MissFortune, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -8840,7 +8841,7 @@ end
 
 
 rule "Mordekaiser picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Mordekaiser, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -8852,7 +8853,7 @@ salience 1
 end
 
 rule "Mordekaiser picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Mordekaiser, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -9009,7 +9010,7 @@ salience 1
 end
 
 rule "Morgana picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Morgana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -9021,7 +9022,7 @@ salience 1
 end
 
 rule "Morgana picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Morgana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -9057,7 +9058,7 @@ salience 1
 end
 
 rule "Morgana picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Morgana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -9069,7 +9070,7 @@ salience 1
 end
 
 rule "Morgana picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Morgana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -9178,7 +9179,7 @@ salience 1
 end
 
 rule "Nami picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nami, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -9190,7 +9191,7 @@ salience 1
 end
 
 rule "Nami picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nami, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -9203,7 +9204,7 @@ end
 
 
 rule "Nasus picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nasus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -9215,7 +9216,7 @@ salience 1
 end
 
 rule "Nasus picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nasus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -9372,7 +9373,7 @@ salience 1
 end
 
 rule "Nautilus picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Nautilus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -9384,7 +9385,7 @@ salience 1
 end
 
 rule "Nautilus picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Nautilus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -9420,7 +9421,7 @@ salience 1
 end
 
 rule "Nautilus picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Nautilus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -9432,7 +9433,7 @@ salience 1
 end
 
 rule "Nautilus picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Nautilus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -9445,7 +9446,7 @@ end
 
 
 rule "Neeko picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Neeko, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -9457,7 +9458,7 @@ salience 1
 end
 
 rule "Neeko picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Neeko, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -9493,7 +9494,7 @@ salience 1
 end
 
 rule "Neeko picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Neeko, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -9505,7 +9506,7 @@ salience 1
 end
 
 rule "Neeko picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Neeko, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -9590,7 +9591,7 @@ salience 1
 end
 
 rule "Nidalee picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nidalee, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -9602,7 +9603,7 @@ salience 1
 end
 
 rule "Nidalee picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nidalee, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -9711,7 +9712,7 @@ salience 1
 end
 
 rule "Nocturne picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nocturne, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -9723,7 +9724,7 @@ salience 1
 end
 
 rule "Nocturne picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Nocturne, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -9832,7 +9833,7 @@ salience 1
 end
 
 rule "NunuAndWillump picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.NunuAndWillump, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -9844,7 +9845,7 @@ salience 1
 end
 
 rule "NunuAndWillump picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.NunuAndWillump, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -9929,7 +9930,7 @@ end
 
 
 rule "Olaf picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Olaf, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -9941,7 +9942,7 @@ salience 1
 end
 
 rule "Olaf picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Olaf, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -9953,7 +9954,7 @@ salience 1
 end
 
 rule "Olaf picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Olaf, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -9965,7 +9966,7 @@ salience 1
 end
 
 rule "Olaf picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Olaf, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -10098,7 +10099,7 @@ salience 1
 end
 
 rule "Orianna picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Orianna, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -10110,7 +10111,7 @@ salience 1
 end
 
 rule "Orianna picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Orianna, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -10171,7 +10172,7 @@ end
 
 
 rule "Ornn picked, friend team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -10183,7 +10184,7 @@ salience 1
 end
 
 rule "Ornn picked, enemy team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -10219,7 +10220,7 @@ salience 1
 end
 
 rule "Ornn picked, friend team, position mid"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -10231,7 +10232,7 @@ salience 1
 end
 
 rule "Ornn picked, enemy team, position mid"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -10267,7 +10268,7 @@ salience 1
 end
 
 rule "Ornn picked, friend team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -10279,7 +10280,7 @@ salience 1
 end
 
 rule "Ornn picked, enemy team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Ornn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -10292,7 +10293,7 @@ end
 
 
 rule "Pantheon picked, friend team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -10304,7 +10305,7 @@ salience 1
 end
 
 rule "Pantheon picked, enemy team, position top"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -10316,7 +10317,7 @@ salience 1
 end
 
 rule "Pantheon picked, friend team, position jungle"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -10328,7 +10329,7 @@ salience 1
 end
 
 rule "Pantheon picked, enemy team, position jungle"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -10340,7 +10341,7 @@ salience 1
 end
 
 rule "Pantheon picked, friend team, position mid"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -10352,7 +10353,7 @@ salience 1
 end
 
 rule "Pantheon picked, enemy team, position mid"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Pantheon, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -10413,7 +10414,7 @@ end
 
 
 rule "Poppy picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Poppy, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -10425,7 +10426,7 @@ salience 1
 end
 
 rule "Poppy picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Poppy, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -10582,7 +10583,7 @@ salience 1
 end
 
 rule "Pyke picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Pyke, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -10594,7 +10595,7 @@ salience 1
 end
 
 rule "Pyke picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Pyke, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -10630,7 +10631,7 @@ salience 1
 end
 
 rule "Pyke picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Pyke, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -10642,7 +10643,7 @@ salience 1
 end
 
 rule "Pyke picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Pyke, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -10679,7 +10680,7 @@ salience 1
 end
 
 rule "Qiyana picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Qiyana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -10691,7 +10692,7 @@ salience 1
 end
 
 rule "Qiyana picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Qiyana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -10703,7 +10704,7 @@ salience 1
 end
 
 rule "Qiyana picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Qiyana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -10715,7 +10716,7 @@ salience 1
 end
 
 rule "Qiyana picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Qiyana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -10776,7 +10777,7 @@ end
 
 
 rule "Quinn picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Quinn, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -10788,7 +10789,7 @@ salience 1
 end
 
 rule "Quinn picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Quinn, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -10993,7 +10994,7 @@ salience 1
 end
 
 rule "Rakan picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Rakan, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -11005,7 +11006,7 @@ salience 1
 end
 
 rule "Rakan picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Rakan, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -11018,7 +11019,7 @@ end
 
 
 rule "Rammus picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rammus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11030,7 +11031,7 @@ salience 1
 end
 
 rule "Rammus picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rammus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11042,7 +11043,7 @@ salience 1
 end
 
 rule "Rammus picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rammus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -11054,7 +11055,7 @@ salience 1
 end
 
 rule "Rammus picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rammus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -11163,7 +11164,7 @@ salience 1
 end
 
 rule "RekSai picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.RekSai, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -11175,7 +11176,7 @@ salience 1
 end
 
 rule "RekSai picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.RekSai, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -11260,7 +11261,7 @@ end
 
 
 rule "Renekton picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Renekton, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11272,7 +11273,7 @@ salience 1
 end
 
 rule "Renekton picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Renekton, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11308,7 +11309,7 @@ salience 1
 end
 
 rule "Renekton picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Renekton, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -11320,7 +11321,7 @@ salience 1
 end
 
 rule "Renekton picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Renekton, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -11381,7 +11382,7 @@ end
 
 
 rule "Rengar picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rengar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11393,7 +11394,7 @@ salience 1
 end
 
 rule "Rengar picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rengar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11405,7 +11406,7 @@ salience 1
 end
 
 rule "Rengar picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rengar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -11417,7 +11418,7 @@ salience 1
 end
 
 rule "Rengar picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rengar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -11502,7 +11503,7 @@ end
 
 
 rule "Riven picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Riven, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11514,7 +11515,7 @@ salience 1
 end
 
 rule "Riven picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Riven, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11550,7 +11551,7 @@ salience 1
 end
 
 rule "Riven picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Riven, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -11562,7 +11563,7 @@ salience 1
 end
 
 rule "Riven picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Riven, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -11623,7 +11624,7 @@ end
 
 
 rule "Rumble picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rumble, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11635,7 +11636,7 @@ salience 1
 end
 
 rule "Rumble picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Rumble, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11671,7 +11672,7 @@ salience 1
 end
 
 rule "Rumble picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rumble, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -11683,7 +11684,7 @@ salience 1
 end
 
 rule "Rumble picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Rumble, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -11744,7 +11745,7 @@ end
 
 
 rule "Ryze picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ryze, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -11756,7 +11757,7 @@ salience 1
 end
 
 rule "Ryze picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ryze, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -11792,7 +11793,7 @@ salience 1
 end
 
 rule "Ryze picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ryze, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -11804,7 +11805,7 @@ salience 1
 end
 
 rule "Ryze picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ryze, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -11889,7 +11890,7 @@ salience 1
 end
 
 rule "Sejuani picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Sejuani, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -11901,7 +11902,7 @@ salience 1
 end
 
 rule "Sejuani picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Sejuani, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -12058,7 +12059,7 @@ salience 1
 end
 
 rule "Senna picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Senna, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -12070,7 +12071,7 @@ salience 1
 end
 
 rule "Senna picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Senna, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -12082,7 +12083,7 @@ salience 1
 end
 
 rule "Senna picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Senna, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -12094,7 +12095,7 @@ salience 1
 end
 
 rule "Senna picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Senna, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -12107,7 +12108,7 @@ end
 
 
 rule "Sett picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sett, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -12119,7 +12120,7 @@ salience 1
 end
 
 rule "Sett picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sett, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -12203,7 +12204,7 @@ salience 1
 end
 
 rule "Sett picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sett, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -12215,7 +12216,7 @@ salience 1
 end
 
 rule "Sett picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sett, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -12252,7 +12253,7 @@ salience 1
 end
 
 rule "Shaco picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Shaco, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -12264,7 +12265,7 @@ salience 1
 end
 
 rule "Shaco picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Shaco, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -12349,7 +12350,7 @@ end
 
 
 rule "Shen picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Shen, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -12361,7 +12362,7 @@ salience 1
 end
 
 rule "Shen picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Shen, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -12445,7 +12446,7 @@ salience 1
 end
 
 rule "Shen picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Shen, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -12457,7 +12458,7 @@ salience 1
 end
 
 rule "Shen picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Shen, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -12494,7 +12495,7 @@ salience 1
 end
 
 rule "Shyvana picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Shyvana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -12506,7 +12507,7 @@ salience 1
 end
 
 rule "Shyvana picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Shyvana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -12591,7 +12592,7 @@ end
 
 
 rule "Singed picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Singed, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -12603,7 +12604,7 @@ salience 1
 end
 
 rule "Singed picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Singed, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -12712,7 +12713,7 @@ end
 
 
 rule "Sion picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sion, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -12724,7 +12725,7 @@ salience 1
 end
 
 rule "Sion picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sion, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -12808,7 +12809,7 @@ salience 1
 end
 
 rule "Sion picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sion, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -12820,7 +12821,7 @@ salience 1
 end
 
 rule "Sion picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sion, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -12905,7 +12906,7 @@ salience 1
 end
 
 rule "Sivir picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Sivir, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -12917,7 +12918,7 @@ salience 1
 end
 
 rule "Sivir picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Sivir, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -12978,7 +12979,7 @@ salience 1
 end
 
 rule "Skarner picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Skarner, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -12990,7 +12991,7 @@ salience 1
 end
 
 rule "Skarner picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Skarner, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -13147,7 +13148,7 @@ salience 1
 end
 
 rule "Sona picked, friend team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sona, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -13159,7 +13160,7 @@ salience 1
 end
 
 rule "Sona picked, enemy team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Sona, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -13171,7 +13172,7 @@ salience 1
 end
 
 rule "Sona picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sona, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -13183,7 +13184,7 @@ salience 1
 end
 
 rule "Sona picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Sona, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -13292,7 +13293,7 @@ salience 1
 end
 
 rule "Soraka picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Soraka, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -13304,7 +13305,7 @@ salience 1
 end
 
 rule "Soraka picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Soraka, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -13317,7 +13318,7 @@ end
 
 
 rule "Swain picked, friend team, position top"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -13329,7 +13330,7 @@ salience 1
 end
 
 rule "Swain picked, enemy team, position top"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -13365,7 +13366,7 @@ salience 1
 end
 
 rule "Swain picked, friend team, position mid"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -13377,7 +13378,7 @@ salience 1
 end
 
 rule "Swain picked, enemy team, position mid"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -13413,7 +13414,7 @@ salience 1
 end
 
 rule "Swain picked, friend team, position support"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -13425,7 +13426,7 @@ salience 1
 end
 
 rule "Swain picked, enemy team, position support"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Swain, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -13438,7 +13439,7 @@ end
 
 
 rule "Sylas picked, friend team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -13450,7 +13451,7 @@ salience 1
 end
 
 rule "Sylas picked, enemy team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -13462,7 +13463,7 @@ salience 1
 end
 
 rule "Sylas picked, friend team, position jungle"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -13474,7 +13475,7 @@ salience 1
 end
 
 rule "Sylas picked, enemy team, position jungle"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -13486,7 +13487,7 @@ salience 1
 end
 
 rule "Sylas picked, friend team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -13498,7 +13499,7 @@ salience 1
 end
 
 rule "Sylas picked, enemy team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Sylas, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -13607,7 +13608,7 @@ salience 1
 end
 
 rule "Syndra picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Syndra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -13619,7 +13620,7 @@ salience 1
 end
 
 rule "Syndra picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Syndra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -13631,7 +13632,7 @@ salience 1
 end
 
 rule "Syndra picked, friend team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Syndra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -13643,7 +13644,7 @@ salience 1
 end
 
 rule "Syndra picked, enemy team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Syndra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -13680,7 +13681,7 @@ end
 
 
 rule "TahmKench picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.TahmKench, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -13692,7 +13693,7 @@ salience 1
 end
 
 rule "TahmKench picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.TahmKench, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -13776,7 +13777,7 @@ salience 1
 end
 
 rule "TahmKench picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.TahmKench, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -13788,7 +13789,7 @@ salience 1
 end
 
 rule "TahmKench picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.TahmKench, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -13825,7 +13826,7 @@ salience 1
 end
 
 rule "Taliyah picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Taliyah, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -13837,7 +13838,7 @@ salience 1
 end
 
 rule "Taliyah picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Taliyah, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -13849,7 +13850,7 @@ salience 1
 end
 
 rule "Taliyah picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Taliyah, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -13861,7 +13862,7 @@ salience 1
 end
 
 rule "Taliyah picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Taliyah, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -13970,7 +13971,7 @@ salience 1
 end
 
 rule "Talon picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Talon, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -13982,7 +13983,7 @@ salience 1
 end
 
 rule "Talon picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Talon, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -14139,7 +14140,7 @@ salience 1
 end
 
 rule "Taric picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Taric, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -14151,7 +14152,7 @@ salience 1
 end
 
 rule "Taric picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Taric, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -14164,7 +14165,7 @@ end
 
 
 rule "Teemo picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Teemo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -14176,7 +14177,7 @@ salience 1
 end
 
 rule "Teemo picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Teemo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -14212,7 +14213,7 @@ salience 1
 end
 
 rule "Teemo picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Teemo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -14224,7 +14225,7 @@ salience 1
 end
 
 rule "Teemo picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Teemo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -14381,7 +14382,7 @@ salience 1
 end
 
 rule "Thresh picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Thresh, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -14393,7 +14394,7 @@ salience 1
 end
 
 rule "Thresh picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Thresh, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -14454,7 +14455,7 @@ salience 1
 end
 
 rule "Tristana picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Tristana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -14466,7 +14467,7 @@ salience 1
 end
 
 rule "Tristana picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Tristana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -14478,7 +14479,7 @@ salience 1
 end
 
 rule "Tristana picked, friend team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Tristana, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -14490,7 +14491,7 @@ salience 1
 end
 
 rule "Tristana picked, enemy team, position bot"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Tristana, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -14527,7 +14528,7 @@ end
 
 
 rule "Trundle picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Trundle, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -14539,7 +14540,7 @@ salience 1
 end
 
 rule "Trundle picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Trundle, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -14551,7 +14552,7 @@ salience 1
 end
 
 rule "Trundle picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Trundle, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -14563,7 +14564,7 @@ salience 1
 end
 
 rule "Trundle picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Trundle, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -14648,7 +14649,7 @@ end
 
 
 rule "Tryndamere picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Tryndamere, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -14660,7 +14661,7 @@ salience 1
 end
 
 rule "Tryndamere picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Tryndamere, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -14817,7 +14818,7 @@ salience 1
 end
 
 rule "TwistedFate picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.TwistedFate, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -14829,7 +14830,7 @@ salience 1
 end
 
 rule "TwistedFate picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.TwistedFate, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -14914,7 +14915,7 @@ salience 1
 end
 
 rule "Twitch picked, friend team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Twitch, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -14926,7 +14927,7 @@ salience 1
 end
 
 rule "Twitch picked, enemy team, position jungle"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Twitch, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -14962,7 +14963,7 @@ salience 1
 end
 
 rule "Twitch picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Twitch, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -14974,7 +14975,7 @@ salience 1
 end
 
 rule "Twitch picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Twitch, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -15011,7 +15012,7 @@ end
 
 
 rule "Udyr picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Udyr, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -15023,7 +15024,7 @@ salience 1
 end
 
 rule "Udyr picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Udyr, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -15035,7 +15036,7 @@ salience 1
 end
 
 rule "Udyr picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Udyr, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -15047,7 +15048,7 @@ salience 1
 end
 
 rule "Udyr picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Udyr, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -15132,7 +15133,7 @@ end
 
 
 rule "Urgot picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Urgot, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -15144,7 +15145,7 @@ salience 1
 end
 
 rule "Urgot picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Urgot, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -15301,7 +15302,7 @@ salience 1
 end
 
 rule "Varus picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Varus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -15313,7 +15314,7 @@ salience 1
 end
 
 rule "Varus picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Varus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -15325,7 +15326,7 @@ salience 1
 end
 
 rule "Varus picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Varus, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -15337,7 +15338,7 @@ salience 1
 end
 
 rule "Varus picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Varus, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -15374,7 +15375,7 @@ end
 
 
 rule "Vayne picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Vayne, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -15386,7 +15387,7 @@ salience 1
 end
 
 rule "Vayne picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Vayne, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -15446,7 +15447,7 @@ salience 1
 end
 
 rule "Vayne picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Vayne, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -15458,7 +15459,7 @@ salience 1
 end
 
 rule "Vayne picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Vayne, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -15543,7 +15544,7 @@ salience 1
 end
 
 rule "Veigar picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Veigar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -15555,7 +15556,7 @@ salience 1
 end
 
 rule "Veigar picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Veigar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -15591,7 +15592,7 @@ salience 1
 end
 
 rule "Veigar picked, friend team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Veigar, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -15603,7 +15604,7 @@ salience 1
 end
 
 rule "Veigar picked, enemy team, position support"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Veigar, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -15664,7 +15665,7 @@ salience 1
 end
 
 rule "VelKoz picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.VelKoz, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -15676,7 +15677,7 @@ salience 1
 end
 
 rule "VelKoz picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.VelKoz, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -15712,7 +15713,7 @@ salience 1
 end
 
 rule "VelKoz picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.VelKoz, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -15724,7 +15725,7 @@ salience 1
 end
 
 rule "VelKoz picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.VelKoz, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -15761,7 +15762,7 @@ salience 1
 end
 
 rule "Vi picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Vi, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -15773,7 +15774,7 @@ salience 1
 end
 
 rule "Vi picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Vi, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -15858,7 +15859,7 @@ end
 
 
 rule "Viktor picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Viktor, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -15870,7 +15871,7 @@ salience 1
 end
 
 rule "Viktor picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Viktor, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -15906,7 +15907,7 @@ salience 1
 end
 
 rule "Viktor picked, friend team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Viktor, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -15918,7 +15919,7 @@ salience 1
 end
 
 rule "Viktor picked, enemy team, position mid"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Viktor, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -15979,7 +15980,7 @@ end
 
 
 rule "Vladimir picked, friend team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Vladimir, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -15991,7 +15992,7 @@ salience 1
 end
 
 rule "Vladimir picked, enemy team, position top"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Vladimir, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -16027,7 +16028,7 @@ salience 1
 end
 
 rule "Vladimir picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Vladimir, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -16039,7 +16040,7 @@ salience 1
 end
 
 rule "Vladimir picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Vladimir, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -16100,7 +16101,7 @@ end
 
 
 rule "Volibear picked, friend team, position top"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -16112,7 +16113,7 @@ salience 1
 end
 
 rule "Volibear picked, enemy team, position top"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -16124,7 +16125,7 @@ salience 1
 end
 
 rule "Volibear picked, friend team, position jungle"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -16136,7 +16137,7 @@ salience 1
 end
 
 rule "Volibear picked, enemy team, position jungle"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -16196,7 +16197,7 @@ salience 1
 end
 
 rule "Volibear picked, friend team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -16208,7 +16209,7 @@ salience 1
 end
 
 rule "Volibear picked, enemy team, position support"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Volibear, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -16245,7 +16246,7 @@ salience 1
 end
 
 rule "Warwick picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Warwick, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -16257,7 +16258,7 @@ salience 1
 end
 
 rule "Warwick picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Warwick, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -16342,7 +16343,7 @@ end
 
 
 rule "Wukong picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Wukong, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -16354,7 +16355,7 @@ salience 1
 end
 
 rule "Wukong picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Wukong, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -16366,7 +16367,7 @@ salience 1
 end
 
 rule "Wukong picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Wukong, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -16378,7 +16379,7 @@ salience 1
 end
 
 rule "Wukong picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Wukong, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -16535,7 +16536,7 @@ salience 1
 end
 
 rule "Xayah picked, friend team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Xayah, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -16547,7 +16548,7 @@ salience 1
 end
 
 rule "Xayah picked, enemy team, position bot"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Xayah, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -16632,7 +16633,7 @@ salience 1
 end
 
 rule "Xerath picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Xerath, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -16644,7 +16645,7 @@ salience 1
 end
 
 rule "Xerath picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Xerath, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -16680,7 +16681,7 @@ salience 1
 end
 
 rule "Xerath picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Xerath, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -16692,7 +16693,7 @@ salience 1
 end
 
 rule "Xerath picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Xerath, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -16729,7 +16730,7 @@ salience 1
 end
 
 rule "XinZhao picked, friend team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.XinZhao, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -16741,7 +16742,7 @@ salience 1
 end
 
 rule "XinZhao picked, enemy team, position jungle"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.XinZhao, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -16826,7 +16827,7 @@ end
 
 
 rule "Yasuo picked, friend team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -16838,7 +16839,7 @@ salience 1
 end
 
 rule "Yasuo picked, enemy team, position top"
-salience 1
+salience 2
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -16874,7 +16875,7 @@ salience 1
 end
 
 rule "Yasuo picked, friend team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -16886,7 +16887,7 @@ salience 1
 end
 
 rule "Yasuo picked, enemy team, position mid"
-salience 1
+salience 5
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -16898,7 +16899,7 @@ salience 1
 end
 
 rule "Yasuo picked, friend team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -16910,7 +16911,7 @@ salience 1
 end
 
 rule "Yasuo picked, enemy team, position bot"
-salience 1
+salience 3
 	when
 		$cp: ChampionPick(champion == Champion.Yasuo, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -16947,7 +16948,7 @@ end
 
 
 rule "Yorick picked, friend team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Yorick, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -16959,7 +16960,7 @@ salience 1
 end
 
 rule "Yorick picked, enemy team, position top"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Yorick, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -17164,7 +17165,7 @@ salience 1
 end
 
 rule "Yuumi picked, friend team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Yuumi, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -17176,7 +17177,7 @@ salience 1
 end
 
 rule "Yuumi picked, enemy team, position support"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Yuumi, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -17189,7 +17190,7 @@ end
 
 
 rule "Zac picked, friend team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zac, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myTopPicked == false)
@@ -17201,7 +17202,7 @@ salience 1
 end
 
 rule "Zac picked, enemy team, position top"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zac, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyTopPicked == false)
@@ -17213,7 +17214,7 @@ salience 1
 end
 
 rule "Zac picked, friend team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zac, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myJunglePicked == false)
@@ -17225,7 +17226,7 @@ salience 1
 end
 
 rule "Zac picked, enemy team, position jungle"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zac, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyJunglePicked == false)
@@ -17358,7 +17359,7 @@ salience 1
 end
 
 rule "Zed picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Zed, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -17370,7 +17371,7 @@ salience 1
 end
 
 rule "Zed picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Zed, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -17479,7 +17480,7 @@ salience 1
 end
 
 rule "Ziggs picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ziggs, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -17491,7 +17492,7 @@ salience 1
 end
 
 rule "Ziggs picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Ziggs, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -17503,7 +17504,7 @@ salience 1
 end
 
 rule "Ziggs picked, friend team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ziggs, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myBotPicked == false)
@@ -17515,7 +17516,7 @@ salience 1
 end
 
 rule "Ziggs picked, enemy team, position bot"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Ziggs, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyBotPicked == false)
@@ -17600,7 +17601,7 @@ salience 1
 end
 
 rule "Zilean picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zilean, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -17612,7 +17613,7 @@ salience 1
 end
 
 rule "Zilean picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zilean, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -17648,7 +17649,7 @@ salience 1
 end
 
 rule "Zilean picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zilean, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -17660,7 +17661,7 @@ salience 1
 end
 
 rule "Zilean picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zilean, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -17721,7 +17722,7 @@ salience 1
 end
 
 rule "Zoe picked, friend team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Zoe, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -17733,7 +17734,7 @@ salience 1
 end
 
 rule "Zoe picked, enemy team, position mid"
-salience 1
+salience 7
 	when
 		$cp: ChampionPick(champion == Champion.Zoe, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -17842,7 +17843,7 @@ salience 1
 end
 
 rule "Zyra picked, friend team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zyra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(myMidPicked == false)
@@ -17854,7 +17855,7 @@ salience 1
 end
 
 rule "Zyra picked, enemy team, position mid"
-salience 1
+salience 4
 	when
 		$cp: ChampionPick(champion == Champion.Zyra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemyMidPicked == false)
@@ -17890,7 +17891,7 @@ salience 1
 end
 
 rule "Zyra picked, friend team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zyra, myTeam == true, position == Position.undefined)
 		$cs: ChampionSelect(mySupportPicked == false)
@@ -17902,7 +17903,7 @@ salience 1
 end
 
 rule "Zyra picked, enemy team, position support"
-salience 1
+salience 6
 	when
 		$cp: ChampionPick(champion == Champion.Zyra, myTeam == false, position == Position.undefined)
 		$cs: ChampionSelect(enemySupportPicked == false)
@@ -17912,4 +17913,3 @@ salience 1
 		update($cs);
 		update($cp);
 end
-

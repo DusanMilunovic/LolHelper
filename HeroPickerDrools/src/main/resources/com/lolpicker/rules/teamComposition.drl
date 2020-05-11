@@ -1,0 +1,119 @@
+package com.lolpicker.rules;
+
+import com.lolpicker.model.ChampionPick;
+import com.lolpicker.model.ChampionSelect;
+import com.lolpicker.model.Champion;
+import com.lolpicker.model.Clasz;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionType;
+
+
+rule "enemy team, adheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.adcarry memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.adheavy)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.adheavy);
+		update($cs);
+end
+	
+rule "my team, adheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.adcarry memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.adheavy)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.adheavy);
+		update($cs);
+end
+
+rule "enemy team, apheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.apcarry memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.apheavy)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.apheavy);
+		update($cs);
+end
+	
+rule "my team, apheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.apcarry memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.apheavy)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.apheavy);
+		update($cs);
+end
+
+rule "enemy team, tankheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.tank memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.tankheavy)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.tankheavy);
+		update($cs);
+end
+	
+rule "my team, tankheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.tank memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.tankheavy)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.tankheavy);
+		update($cs);
+end
+
+rule "enemy team, healerheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.healer memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.healerheavy)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.healerheavy);
+		update($cs);
+end
+	
+rule "my team, healerheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.healer memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.healerheavy)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.healerheavy);
+		update($cs);
+end
+
+rule "enemy team, pokeheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.pokeheavy)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.pokeheavy);
+		update($cs);
+end
+	
+rule "my team, pokeheavy composition"
+	no-loop
+	when
+		$a: Number(this >= 2) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.pokeheavy)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.pokeheavy);
+		update($cs);
+end

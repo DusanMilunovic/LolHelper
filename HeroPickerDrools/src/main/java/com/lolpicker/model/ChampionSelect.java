@@ -6,6 +6,8 @@ public class ChampionSelect {
 	private ArrayList<Champion> champsForPosition = new ArrayList<>();
 	private ArrayList<Champion> counterPicks = new ArrayList<>();
 	private ArrayList<Champion> compositionCounters = new ArrayList<>();
+	//todo mozda moram dodati update u pravila u fajlu roleChampions.drl
+	private ArrayList<Champion> topTierChampions = new ArrayList<>();
 	private ArrayList<CompositionType> enemyTeamComposition = new ArrayList<>();
 	private ArrayList<CompositionType> myTeamComposition = new ArrayList<>();
 	private boolean enemyTopPicked = false;
@@ -18,10 +20,16 @@ public class ChampionSelect {
 	private boolean myMidPicked = false;
 	private boolean myBotPicked = false;
 	private boolean mySupportPicked = false;
+	private Position myPosition;
 
 	public ChampionSelect() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public ChampionSelect(Position myPosition) {
+		super();
+		this.myPosition = myPosition;
 	}
 
 	public ArrayList<Champion> getChampsForPosition() {
@@ -114,5 +122,22 @@ public class ChampionSelect {
 	public void setMySupportPicked(boolean mySupportPicked) {
 		this.mySupportPicked = mySupportPicked;
 	}
+
+	public ArrayList<Champion> getTopTierChampions() {
+		return topTierChampions;
+	}
+
+	public void setTopTierChampions(ArrayList<Champion> topTierChampions) {
+		this.topTierChampions = topTierChampions;
+	}
+
+	public Position getMyPosition() {
+		return myPosition;
+	}
+
+	public void setMyPosition(Position myPosition) {
+		this.myPosition = myPosition;
+	}
+	
 	
 }
