@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 public class ChampionSelect {
 	private ArrayList<Champion> champsForPosition = new ArrayList<>();
-	private ArrayList<Champion> counterPicks = new ArrayList<>();
+//	private ArrayList<Champion> counterPicks = new ArrayList<>();
 	private ArrayList<Champion> compositionCounters = new ArrayList<>();
+	private ArrayList<String> compositionCountersAdvice = new ArrayList<>();
 	//todo mozda moram dodati update u pravila u fajlu roleChampions.drl
-	private ArrayList<Champion> topTierChampions = new ArrayList<>();
+//	private ArrayList<Champion> topTierChampions = new ArrayList<>();
 	private ArrayList<CompositionType> enemyTeamComposition = new ArrayList<>();
 	private ArrayList<CompositionType> myTeamComposition = new ArrayList<>();
+	private CompositionStrongPoint enemyTeamStrongPoint = CompositionStrongPoint.balanced;
+	private CompositionStrongPoint myTeamStrongPoint = CompositionStrongPoint.balanced;
 	private boolean enemyTopPicked = false;
 	private boolean enemyJunglePicked = false;
 	private boolean enemyMidPicked = false;
@@ -38,12 +41,12 @@ public class ChampionSelect {
 	public void setChampsForPosition(ArrayList<Champion> champsForPosition) {
 		this.champsForPosition = champsForPosition;
 	}
-	public ArrayList<Champion> getCounterPicks() {
-		return counterPicks;
-	}
-	public void setCounterPicks(ArrayList<Champion> counterPicks) {
-		this.counterPicks = counterPicks;
-	}
+//	public ArrayList<Champion> getCounterPicks() {
+//		return counterPicks;
+//	}
+//	public void setCounterPicks(ArrayList<Champion> counterPicks) {
+//		this.counterPicks = counterPicks;
+//	}
 	public ArrayList<Champion> getCompositionCounters() {
 		return compositionCounters;
 	}
@@ -123,13 +126,13 @@ public class ChampionSelect {
 		this.mySupportPicked = mySupportPicked;
 	}
 
-	public ArrayList<Champion> getTopTierChampions() {
-		return topTierChampions;
-	}
-
-	public void setTopTierChampions(ArrayList<Champion> topTierChampions) {
-		this.topTierChampions = topTierChampions;
-	}
+//	public ArrayList<Champion> getTopTierChampions() {
+//		return topTierChampions;
+//	}
+//
+//	public void setTopTierChampions(ArrayList<Champion> topTierChampions) {
+//		this.topTierChampions = topTierChampions;
+//	}
 
 	public Position getMyPosition() {
 		return myPosition;
@@ -137,6 +140,30 @@ public class ChampionSelect {
 
 	public void setMyPosition(Position myPosition) {
 		this.myPosition = myPosition;
+	}
+
+	public ArrayList<String> getCompositionCountersAdvice() {
+		return compositionCountersAdvice;
+	}
+
+	public void setCompositionCountersAdvice(ArrayList<String> compositionCountersAdvice) {
+		this.compositionCountersAdvice = compositionCountersAdvice;
+	}
+
+	public CompositionStrongPoint getEnemyTeamStrongPoint() {
+		return enemyTeamStrongPoint;
+	}
+
+	public void setEnemyTeamStrongPoint(CompositionStrongPoint enemyTeamStrongPoint) {
+		this.enemyTeamStrongPoint = enemyTeamStrongPoint;
+	}
+
+	public CompositionStrongPoint getMyTeamStrongPoint() {
+		return myTeamStrongPoint;
+	}
+
+	public void setMyTeamStrongPoint(CompositionStrongPoint myTeamStrongPoint) {
+		this.myTeamStrongPoint = myTeamStrongPoint;
 	}
 	
 	

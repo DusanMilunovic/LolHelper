@@ -6,6 +6,8 @@ import com.lolpicker.model.Champion;
 import com.lolpicker.model.Clasz;
 import com.lolpicker.model.StrongPoint;
 import com.lolpicker.model.CompositionType;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionStrongPoint;
 
 
 rule "enemy team, adheavy composition"
@@ -115,5 +117,83 @@ rule "my team, pokeheavy composition"
 		$cs: ChampionSelect(myTeamComposition not contains CompositionType.pokeheavy)
 	then
 		$cs.getMyTeamComposition().add(CompositionType.pokeheavy);
+		update($cs);
+end
+
+rule "enemy team, early game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == false, strongPoint == StrongPoint.early), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setEnemyTeamStrongPoint(CompositionStrongPoint.earlygame);
+		update($cs);
+end
+
+rule "my team, early game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == true, strongPoint == StrongPoint.early), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setMyTeamStrongPoint(CompositionStrongPoint.earlygame);
+		update($cs);
+end
+
+rule "enemy team, mid game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == false, strongPoint == StrongPoint.mid), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setEnemyTeamStrongPoint(CompositionStrongPoint.midgame);
+		update($cs);
+end
+
+rule "my team, mid game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == true, strongPoint == StrongPoint.mid), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setMyTeamStrongPoint(CompositionStrongPoint.midgame);
+		update($cs);
+end
+
+rule "enemy team, late game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == false, strongPoint == StrongPoint.late), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setEnemyTeamStrongPoint(CompositionStrongPoint.lategame);
+		update($cs);
+end
+
+rule "my team, late game composition"
+	no-loop
+	agenda-group "end"
+	salience 2
+	when
+		$a: Number(this >= 3) from accumulate 
+		($cp: ChampionPick(myTeam == true, strongPoint == StrongPoint.late), count($cp))
+		$cs: ChampionSelect()
+	then
+		$cs.setMyTeamStrongPoint(CompositionStrongPoint.lategame);
 		update($cs);
 end

@@ -15,7 +15,6 @@ public class RoleChampionsTests {
 	KieSession kSession = null;
 	static KieContainer kieContainer;
 	
-	//TODO dodaj watch za sve sto se tice ovih default championa, da update champion selecta ne utice da se opet dodaju heroji u ove liste
 	@BeforeClass
 	public static void beforeClass() {
         KieServices ks = KieServices.Factory.get();

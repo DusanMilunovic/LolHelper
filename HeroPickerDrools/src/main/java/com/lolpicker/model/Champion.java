@@ -11,8 +11,8 @@ public enum Champion {
 	Jax,Jayce,Jhin,Jinx,KaiSa,Kalista,Karma,Karthus,
 	Kassadin,Katarina,Kayle,Kayn,Kennen,KhaZix,Kindred,
 	Kled,KogMaw,LeBlanc,LeeSin,Leona,Lissandra,Lucian,
-	Lulu,Lux,Malphite,Malzahar,Maokai,MasterYi
-	,MissFortune,Mordekaiser,Morgana,Nami,Nasus,
+	Lulu,Lux,Malphite,Malzahar,Maokai,MasterYi,
+	MissFortune,Mordekaiser,Morgana,Nami,Nasus,
 	Nautilus,Neeko,Nidalee,Nocturne,NunuAndWillump,
 	Olaf,Orianna,Ornn,Pantheon,Poppy,Pyke,Qiyana,
 	Quinn,Rakan,Rammus,RekSai,Renekton,Rengar,Riven,

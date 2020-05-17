@@ -154,4 +154,34 @@ public class TeamCompositionTests {
 		assertEquals(1, championSelect.getMyTeamComposition().size());
 	}
 
+	@Test
+	public void enemyTeamPokeheavyComp() {
+		KieSession kSession = kieContainer.newKieSession("ksession-rules");
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, false, false);
+		ChampionPick nidalee = new ChampionPick(Nidalee, false, false);
+		ChampionPick varus = new ChampionPick(Varus, false, false);
+		kSession.insert(jayce);
+		kSession.insert(nidalee);
+		kSession.insert(varus);
+		kSession.fireAllRules();
+		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.pokeheavy));
+		assertEquals(1, championSelect.getEnemyTeamComposition().size());
+	}
+
+	@Test
+	public void myTeamPokeheavyComp() {
+		KieSession kSession = kieContainer.newKieSession("ksession-rules");
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, true, false);
+		ChampionPick nidalee = new ChampionPick(Nidalee, true, false);
+		kSession.insert(jayce);
+		kSession.insert(nidalee);
+		kSession.fireAllRules();
+		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.pokeheavy));
+		assertEquals(1, championSelect.getMyTeamComposition().size());
+	}
+
 }
