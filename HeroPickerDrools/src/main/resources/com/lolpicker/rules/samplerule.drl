@@ -1,4 +1,0 @@
-package com.lolpicker.rules;
-
-import com.lolpicker.model.ChampionPick;
-import com.lolpicker.model.Champion;

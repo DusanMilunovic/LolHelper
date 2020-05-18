@@ -55,7 +55,7 @@ public class ClassAndStrongPointTest {
 	}
 	
 	@Test
-	public void dijagnostika1() {
+	public void classStrongPointsAndCountersTest() {
 		KieSession kSession = kieContainer.newKieSession("ksession-rules");
 		ChampionSelect championSelect = new ChampionSelect(Position.top);
 		kSession.insert(championSelect);
