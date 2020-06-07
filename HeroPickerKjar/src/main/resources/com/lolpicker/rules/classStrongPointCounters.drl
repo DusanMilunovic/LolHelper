@@ -1,0 +1,2094 @@
+package com.lolpicker.rules;
+
+import com.lolpicker.model.ChampionPick;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.Clasz;
+import com.lolpicker.model.Champion;
+
+rule "Aatrox picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Aatrox)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		$cp.getCounterPicks().add(Champion.Darius);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		update($cp);
+end
+
+rule "Ahri picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ahri)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Annie);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		update($cp);
+end
+
+rule "Akali picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Akali)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Ryze);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Talon);
+		update($cp);
+end
+
+rule "Alistar picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Alistar)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		update($cp);
+end
+
+rule "Amumu picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Amumu)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Vi);
+		$cp.getCounterPicks().add(Champion.Evelynn);
+		update($cp);
+end
+
+rule "Anivia picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Anivia)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Diana);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Malzahar);
+		$cp.getCounterPicks().add(Champion.Corki);
+		update($cp);
+end
+
+rule "Annie picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Annie)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Zed);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.Orianna);
+		$cp.getCounterPicks().add(Champion.Vladimir);
+		update($cp);
+end
+
+rule "Aphelios picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Aphelios)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Varus);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		update($cp);
+end
+
+rule "Ashe picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ashe)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Cassiopeia);
+		update($cp);
+end
+
+rule "AurelionSol picked"
+	when 
+		$cp: ChampionPick(champion == Champion.AurelionSol)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.LeBlanc);
+		$cp.getCounterPicks().add(Champion.Ahri);
+		$cp.getCounterPicks().add(Champion.Zed);
+		$cp.getCounterPicks().add(Champion.Diana);
+		$cp.getCounterPicks().add(Champion.Katarina);
+		update($cp);
+end
+
+rule "Azir picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Azir)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Zoe);
+		$cp.getCounterPicks().add(Champion.Ekko);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		update($cp);
+end
+
+rule "Bard picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Bard)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		update($cp);
+end
+
+rule "Blitzcrank picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Blitzcrank)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Taric);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Brand);
+		update($cp);
+end
+
+rule "Brand picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Brand)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Nautilus);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		update($cp);
+end
+
+rule "Braum picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Braum)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		update($cp);
+end
+
+rule "Caitlyn picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Caitlyn)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.TahmKench);
+		update($cp);
+end
+
+rule "Camille picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Camille)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Fiora);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.DrMundo);
+		update($cp);
+end
+
+rule "Cassiopeia picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Cassiopeia)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		update($cp);
+end
+
+rule "ChoGath picked"
+	when 
+		$cp: ChampionPick(champion == Champion.ChoGath)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Vayne);
+		$cp.getCounterPicks().add(Champion.Akali);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Camille);
+		update($cp);
+end
+
+rule "Corki picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Corki)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Neeko);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		update($cp);
+end
+
+rule "Darius picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Darius)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Shyvana);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		update($cp);
+end
+
+rule "Diana picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Diana)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Karma);
+		$cp.getCounterPicks().add(Champion.Mordekaiser);
+		update($cp);
+end
+
+rule "DrMundo picked"
+	when 
+		$cp: ChampionPick(champion == Champion.DrMundo)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Urgot);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Darius);
+		update($cp);
+end
+
+rule "Draven picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Draven)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Senna);
+		update($cp);
+end
+
+rule "Ekko picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ekko)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Poppy);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		update($cp);
+end
+
+rule "Elise picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Elise)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		update($cp);
+end
+
+rule "Evelynn picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Evelynn)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Sejuani);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		update($cp);
+end
+
+rule "Ezreal picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ezreal)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Taliyah);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Corki);
+		$cp.getCounterPicks().add(Champion.Swain);
+		update($cp);
+end
+
+rule "Fiddlesticks picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Fiddlesticks)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.JarvanIV);
+		update($cp);
+end
+
+rule "Fiora picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Fiora)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Gangplank);
+		update($cp);
+end
+
+rule "Fizz picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Fizz)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Lissandra);
+		update($cp);
+end
+
+rule "Galio picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Galio)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Anivia);
+		update($cp);
+end
+
+rule "Gangplank picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Gangplank)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.Tryndamere);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Garen picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Garen)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Karma);
+		$cp.getCounterPicks().add(Champion.Quinn);
+		$cp.getCounterPicks().add(Champion.Aatrox);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Darius);
+		update($cp);
+end
+
+rule "Gnar picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Gnar)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Jayce);
+		update($cp);
+end
+
+rule "Gragas picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Gragas)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.NunuAndWillump);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		update($cp);
+end
+
+rule "Graves picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Graves)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Hecarim picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Hecarim)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Kindred);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Sylas);
+		update($cp);
+end
+
+rule "Heimerdinger picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Heimerdinger)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Fizz);
+		$cp.getCounterPicks().add(Champion.Veigar);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Ekko);
+		update($cp);
+end
+
+rule "Illaoi picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Illaoi)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Akali);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Darius);
+		update($cp);
+end
+
+rule "Irelia picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Irelia)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Tryndamere);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Poppy);
+		update($cp);
+end
+
+rule "Ivern picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ivern)
+	then
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Evelynn);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		update($cp);
+end
+
+rule "Janna picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Janna)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Malphite);
+		$cp.getCounterPicks().add(Champion.Veigar);
+		update($cp);
+end
+
+rule "JarvanIV picked"
+	when 
+		$cp: ChampionPick(champion == Champion.JarvanIV)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Taliyah);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Morgana);
+		update($cp);
+end
+
+rule "Jax picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Jax)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		update($cp);
+end
+
+rule "Jayce picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Jayce)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Quinn);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		$cp.getCounterPicks().add(Champion.Aatrox);
+		update($cp);
+end
+
+rule "Jhin picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Jhin)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		$cp.getCounterPicks().add(Champion.Varus);
+		update($cp);
+end
+
+rule "Jinx picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Jinx)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Veigar);
+		update($cp);
+end
+
+rule "KaiSa picked"
+	when 
+		$cp: ChampionPick(champion == Champion.KaiSa)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.TahmKench);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		update($cp);
+end
+
+rule "Kalista picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kalista)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Caitlyn);
+		$cp.getCounterPicks().add(Champion.MissFortune);
+		update($cp);
+end
+
+rule "Karma picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Karma)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		update($cp);
+end
+
+rule "Karthus picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Karthus)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Vi);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		update($cp);
+end
+
+rule "Kassadin picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kassadin)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Tryndamere);
+		$cp.getCounterPicks().add(Champion.Graves);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		$cp.getCounterPicks().add(Champion.Garen);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		update($cp);
+end
+
+rule "Katarina picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Katarina)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		$cp.getCounterPicks().add(Champion.Garen);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.Lulu);
+		update($cp);
+end
+
+rule "Kayle picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kayle)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Gnar);
+		$cp.getCounterPicks().add(Champion.Tryndamere);
+		update($cp);
+end
+
+rule "Kayn picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kayn)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Poppy);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Kindred);
+		$cp.getCounterPicks().add(Champion.NunuAndWillump);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Kennen picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kennen)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Malphite);
+		$cp.getCounterPicks().add(Champion.Gnar);
+		$cp.getCounterPicks().add(Champion.Quinn);
+		update($cp);
+end
+
+rule "KhaZix picked"
+	when 
+		$cp: ChampionPick(champion == Champion.KhaZix)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Elise);
+		update($cp);
+end
+
+rule "Kindred picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kindred)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Kled picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Kled)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Fiora);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		update($cp);
+end
+
+rule "KogMaw picked"
+	when 
+		$cp: ChampionPick(champion == Champion.KogMaw)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Kalista);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Xayah);
+		update($cp);
+end
+
+rule "LeBlanc picked"
+	when 
+		$cp: ChampionPick(champion == Champion.LeBlanc)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Talon);
+		update($cp);
+end
+
+rule "LeeSin picked"
+	when 
+		$cp: ChampionPick(champion == Champion.LeeSin)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Taliyah);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "Leona picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Leona)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Morgana);
+		$cp.getCounterPicks().add(Champion.Fiddlesticks);
+		update($cp);
+end
+
+rule "Lissandra picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Lissandra)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Neeko);
+		$cp.getCounterPicks().add(Champion.Malphite);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		update($cp);
+end
+
+rule "Lucian picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Lucian)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Kalista);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		update($cp);
+end
+
+rule "Lulu picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Lulu)
+	then
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		update($cp);
+end
+
+rule "Lux picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Lux)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Morgana);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Diana);
+		update($cp);
+end
+
+rule "Malphite picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Malphite)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Mordekaiser);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Malzahar picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Malzahar)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		update($cp);
+end
+
+rule "Maokai picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Maokai)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Mordekaiser);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Shyvana);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Sett);
+		update($cp);
+end
+
+rule "MasterYi picked"
+	when 
+		$cp: ChampionPick(champion == Champion.MasterYi)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "MissFortune picked"
+	when 
+		$cp: ChampionPick(champion == Champion.MissFortune)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		update($cp);
+end
+
+rule "Mordekaiser picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Mordekaiser)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.Aatrox);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		update($cp);
+end
+
+rule "Morgana picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Morgana)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		update($cp);
+end
+
+rule "Nami picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Nami)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Maokai);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Thresh);
+		update($cp);
+end
+
+rule "Nasus picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Nasus)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Aatrox);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Nautilus picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Nautilus)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Thresh);
+		update($cp);
+end
+
+rule "Neeko picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Neeko)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Zed);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.Orianna);
+		update($cp);
+end
+
+rule "Nidalee picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Nidalee)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Vi);
+		update($cp);
+end
+
+rule "Nocturne picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Nocturne)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Sejuani);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "NunuAndWillump picked"
+	when 
+		$cp: ChampionPick(champion == Champion.NunuAndWillump)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "Olaf picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Olaf)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Skarner);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "Orianna picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Orianna)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		update($cp);
+end
+
+rule "Ornn picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ornn)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Mordekaiser);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Sion);
+		$cp.getCounterPicks().add(Champion.Shen);
+		update($cp);
+end
+
+rule "Pantheon picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Pantheon)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Ryze);
+		update($cp);
+end
+
+rule "Poppy picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Poppy)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Darius);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Mordekaiser);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		update($cp);
+end
+
+rule "Pyke picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Pyke)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Sona);
+		$cp.getCounterPicks().add(Champion.Yuumi);
+		$cp.getCounterPicks().add(Champion.TahmKench);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Veigar);
+		update($cp);
+end
+
+rule "Qiyana picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Qiyana)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Talon);
+		update($cp);
+end
+
+rule "Quinn picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Quinn)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Poppy);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Malphite);
+		update($cp);
+end
+
+rule "Rakan picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Rakan)
+	then
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		update($cp);
+end
+
+rule "Rammus picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Rammus)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		update($cp);
+end
+
+rule "RekSai picked"
+	when 
+		$cp: ChampionPick(champion == Champion.RekSai)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Sett);
+		update($cp);
+end
+
+rule "Renekton picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Renekton)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Kennen);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		update($cp);
+end
+
+rule "Rengar picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Rengar)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Skarner);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.LeeSin);
+		update($cp);
+end
+
+rule "Riven picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Riven)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Jayce);
+		update($cp);
+end
+
+rule "Rumble picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Rumble)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Ahri);
+		$cp.getCounterPicks().add(Champion.Orianna);
+		$cp.getCounterPicks().add(Champion.Akali);
+		$cp.getCounterPicks().add(Champion.Katarina);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		update($cp);
+end
+
+rule "Ryze picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ryze)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Talon);
+		$cp.getCounterPicks().add(Champion.Malzahar);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Zed);
+		update($cp);
+end
+
+rule "Sejuani picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sejuani)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Senna picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Senna)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Maokai);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		update($cp);
+end
+
+rule "Sett picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sett)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Singed);
+		update($cp);
+end
+
+rule "Shaco picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Shaco)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Wukong);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Sett);
+		update($cp);
+end
+
+rule "Shen picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Shen)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Shyvana);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		update($cp);
+end
+
+rule "Shyvana picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Shyvana)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.DrMundo);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		update($cp);
+end
+
+rule "Singed picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Singed)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Vayne);
+		$cp.getCounterPicks().add(Champion.Quinn);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Teemo);
+		$cp.getCounterPicks().add(Champion.Illaoi);
+		update($cp);
+end
+
+rule "Sion picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sion)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Aatrox);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Singed);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		update($cp);
+end
+
+rule "Sivir picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sivir)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		$cp.getCounterPicks().add(Champion.Caitlyn);
+		update($cp);
+end
+
+rule "Skarner picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Skarner)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Ekko);
+		$cp.getCounterPicks().add(Champion.Fiddlesticks);
+		$cp.getCounterPicks().add(Champion.Graves);
+		$cp.getCounterPicks().add(Champion.Kayn);
+		update($cp);
+end
+
+rule "Sona picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sona)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Karma);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Alistar);
+		update($cp);
+end
+
+rule "Soraka picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Soraka)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Brand);
+		$cp.getCounterPicks().add(Champion.Zyra);
+		$cp.getCounterPicks().add(Champion.Bard);
+		update($cp);
+end
+
+rule "Swain picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Swain)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		update($cp);
+end
+
+rule "Sylas picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Sylas)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.AurelionSol);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		update($cp);
+end
+
+rule "Syndra picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Syndra)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Taliyah);
+		$cp.getCounterPicks().add(Champion.Nocturne);
+		$cp.getCounterPicks().add(Champion.Malphite);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Taric);
+		update($cp);
+end
+
+rule "TahmKench picked"
+	when 
+		$cp: ChampionPick(champion == Champion.TahmKench)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Janna);
+		$cp.getCounterPicks().add(Champion.Senna);
+		$cp.getCounterPicks().add(Champion.Nami);
+		$cp.getCounterPicks().add(Champion.Blitzcrank);
+		update($cp);
+end
+
+rule "Taliyah picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Taliyah)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.Graves);
+		update($cp);
+end
+
+rule "Talon picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Talon)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Diana);
+		$cp.getCounterPicks().add(Champion.Vladimir);
+		update($cp);
+end
+
+rule "Taric picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Taric)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getCounterPicks().add(Champion.Senna);
+		$cp.getCounterPicks().add(Champion.Maokai);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.setStrongPoint(StrongPoint.late);
+		update($cp);
+end
+
+rule "Teemo picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Teemo)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Yorick);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Sion);
+		update($cp);
+end
+
+rule "Thresh picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Thresh)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Swain);
+		update($cp);
+end
+
+rule "Tristana picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Tristana)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Varus);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		update($cp);
+end
+
+rule "Trundle picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Trundle)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Elise);
+		$cp.getCounterPicks().add(Champion.NunuAndWillump);
+		update($cp);
+end
+
+rule "Tryndamere picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Tryndamere)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Kled);
+		update($cp);
+end
+
+rule "TwistedFate picked"
+	when 
+		$cp: ChampionPick(champion == Champion.TwistedFate)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Lissandra);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Sylas);
+		update($cp);
+end
+
+rule "Twitch picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Twitch)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		update($cp);
+end
+
+rule "Udyr picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Udyr)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Fiddlesticks);
+		$cp.getCounterPicks().add(Champion.KhaZix);
+		$cp.getCounterPicks().add(Champion.Vi);
+		update($cp);
+end
+
+rule "Urgot picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Urgot)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Akali);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Quinn);
+		$cp.getCounterPicks().add(Champion.Kled);
+		update($cp);
+end
+
+rule "Varus picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Varus)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Kalista);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		update($cp);
+end
+
+rule "Vayne picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Vayne)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Draven);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Heimerdinger);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		$cp.getCounterPicks().add(Champion.Tristana);
+		update($cp);
+end
+
+rule "Veigar picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Veigar)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Ekko);
+		$cp.getCounterPicks().add(Champion.Katarina);
+		$cp.getCounterPicks().add(Champion.Neeko);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		update($cp);
+end
+
+rule "VelKoz picked"
+	when 
+		$cp: ChampionPick(champion == Champion.VelKoz)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Katarina);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Talon);
+		update($cp);
+end
+
+rule "Vi picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Vi)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Evelynn);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		update($cp);
+end
+
+rule "Viktor picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Viktor)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.Zed);
+		update($cp);
+end
+
+rule "Vladimir picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Vladimir)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.ChoGath);
+		$cp.getCounterPicks().add(Champion.Zilean);
+		$cp.getCounterPicks().add(Champion.Rumble);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		update($cp);
+end
+
+rule "Volibear picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Volibear)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Hecarim);
+		$cp.getCounterPicks().add(Champion.Trundle);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		update($cp);
+end
+
+rule "Warwick picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Warwick)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Kindred);
+		update($cp);
+end
+
+rule "Wukong picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Wukong)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Evelynn);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		update($cp);
+end
+
+rule "Xayah picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Xayah)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Syndra);
+		$cp.getCounterPicks().add(Champion.Veigar);
+		$cp.getCounterPicks().add(Champion.Lucian);
+		$cp.getCounterPicks().add(Champion.Ziggs);
+		update($cp);
+end
+
+rule "Xerath picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Xerath)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.Diana);
+		$cp.getCounterPicks().add(Champion.Katarina);
+		update($cp);
+end
+
+rule "XinZhao picked"
+	when 
+		$cp: ChampionPick(champion == Champion.XinZhao)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.JarvanIV);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		$cp.getCounterPicks().add(Champion.Rengar);
+		$cp.getCounterPicks().add(Champion.Olaf);
+		$cp.getCounterPicks().add(Champion.Nidalee);
+		update($cp);
+end
+
+rule "Yasuo picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Yasuo)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Fiora);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Sett);
+		update($cp);
+end
+
+rule "Yorick picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Yorick)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Kled);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Yasuo);
+		$cp.getCounterPicks().add(Champion.Irelia);
+		$cp.getCounterPicks().add(Champion.Shen);
+		update($cp);
+end
+
+rule "Yuumi picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Yuumi)
+	then
+		$cp.getClasses().add(Clasz.healer);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Volibear);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Poppy);
+		$cp.getCounterPicks().add(Champion.Shen);
+		$cp.getCounterPicks().add(Champion.Sett);
+		update($cp);
+end
+
+rule "Zac picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Zac)
+	then
+		$cp.getClasses().add(Clasz.tank);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Skarner);
+		$cp.getCounterPicks().add(Champion.RekSai);
+		$cp.getCounterPicks().add(Champion.XinZhao);
+		$cp.getCounterPicks().add(Champion.Udyr);
+		$cp.getCounterPicks().add(Champion.Warwick);
+		update($cp);
+end
+
+rule "Zed picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Zed)
+	then
+		$cp.getClasses().add(Clasz.adcarry);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Morgana);
+		$cp.getCounterPicks().add(Champion.Pantheon);
+		$cp.getCounterPicks().add(Champion.Renekton);
+		$cp.getCounterPicks().add(Champion.Garen);
+		update($cp);
+end
+
+rule "Ziggs picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Ziggs)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.late);
+		$cp.getCounterPicks().add(Champion.Qiyana);
+		$cp.getCounterPicks().add(Champion.TwistedFate);
+		$cp.getCounterPicks().add(Champion.Ryze);
+		$cp.getCounterPicks().add(Champion.Diana);
+		$cp.getCounterPicks().add(Champion.Akali);
+		update($cp);
+end
+
+rule "Zilean picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Zilean)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.balanced);
+		$cp.getCounterPicks().add(Champion.VelKoz);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Swain);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		update($cp);
+end
+
+rule "Zoe picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Zoe)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.getClasses().add(Clasz.poke);
+		$cp.setStrongPoint(StrongPoint.mid);
+		$cp.getCounterPicks().add(Champion.Morgana);
+		$cp.getCounterPicks().add(Champion.Galio);
+		$cp.getCounterPicks().add(Champion.AurelionSol);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Malzahar);
+		update($cp);
+end
+
+rule "Zyra picked"
+	when 
+		$cp: ChampionPick(champion == Champion.Zyra)
+	then
+		$cp.getClasses().add(Clasz.apcarry);
+		$cp.setStrongPoint(StrongPoint.early);
+		$cp.getCounterPicks().add(Champion.Xerath);
+		$cp.getCounterPicks().add(Champion.Pyke);
+		$cp.getCounterPicks().add(Champion.Shaco);
+		$cp.getCounterPicks().add(Champion.Sett);
+		$cp.getCounterPicks().add(Champion.Galio);
+		update($cp);
+end
