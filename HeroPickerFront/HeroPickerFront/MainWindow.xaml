@@ -25,7 +25,7 @@
         <TextBox AcceptsReturn="True" TextWrapping="Wrap" />
         <Menu Grid.ColumnSpan="3" Grid.Row="0">
             <MenuItem Header="_File">
-                <MenuItem Header="_Edit drools files" Click="EditDroolsFiles_Click" Name="EditDroolsFiles"/>
+                <MenuItem Header="_Add custom team compositions" Click="EditDroolsFiles_Click" Name="EditDroolsFiles"/>
             </MenuItem>
         </Menu>
         <Button Grid.Column="0" Grid.Row="1" Name="Button0" Click="ButtonClick">
