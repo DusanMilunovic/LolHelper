@@ -16,7 +16,6 @@ public class SampleController {
 
 	@Autowired
 	public SampleController(SampleService sampleService) {
-		System.out.println("evo me 2");
 		this.sampleService = sampleService;
 	}
 	

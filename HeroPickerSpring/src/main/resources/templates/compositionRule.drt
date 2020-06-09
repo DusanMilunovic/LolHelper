@@ -1,0 +1,91 @@
+template header
+composition
+adChampions
+apChampions
+tankChampions
+healerChampions
+pokeChampions
+champion0
+champion1
+champion2
+champion3
+champion4
+champion5
+champion6
+champion7
+champion8
+champion9
+
+
+package com.lolpicker.rules;
+
+import com.lolpicker.model.ChampionPick;
+import com.lolpicker.model.ChampionSelect;
+import com.lolpicker.model.Champion;
+import com.lolpicker.model.Clasz;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionType;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionStrongPoint;
+
+
+template "composition-rules"
+
+rule "enemy team, custom_@{composition} composition"
+	no-loop
+	when
+		$ad: Number(this >= @{adChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.adcarry memberOf classes), count($cp))
+		$ap: Number(this >= @{apChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.apcarry memberOf classes), count($cp))
+		$tank: Number(this >= @{tankChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.tank memberOf classes), count($cp))
+		$healer: Number(this >= @{healerChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.healer memberOf classes), count($cp))
+		$poke: Number(this >= @{pokeChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.customComposition@{composition})
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.customComposition@{composition});
+		update($cs);
+end
+	
+rule "my team, custom_@{composition} composition"
+	no-loop
+	when
+		$ad: Number(this >= @{adChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.adcarry memberOf classes), count($cp))
+		$ap: Number(this >= @{apChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.apcarry memberOf classes), count($cp))
+		$tank: Number(this >= @{tankChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.tank memberOf classes), count($cp))
+		$healer: Number(this >= @{healerChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.healer memberOf classes), count($cp))
+		$poke: Number(this >= @{pokeChampions}) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.customComposition@{composition})
+	then
+		$cs.getMyTeamComposition().add(CompositionType.customComposition@{composition});
+		update($cs);
+end
+	
+rule "enemy team custom_@{composition} comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.customComposition@{composition})
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.@{champion0});
+		champions.add(Champion.@{champion1});
+		champions.add(Champion.@{champion2});
+		champions.add(Champion.@{champion3});
+		champions.add(Champion.@{champion4});
+		champions.add(Champion.@{champion5});
+		champions.add(Champion.@{champion6});
+		champions.add(Champion.@{champion7});
+		champions.add(Champion.@{champion8});
+		champions.add(Champion.@{champion9});
+		$cs.getCompositionCounters().put("customComposition@{composition}", champions);
+end
+
+end template

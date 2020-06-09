@@ -71,9 +71,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Advice.xaml.cs">
-      <DependentUpon>Advice.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ChampionInfo.xaml.cs">
       <DependentUpon>ChampionInfo.xaml</DependentUpon>
     </Compile>
@@ -82,16 +79,14 @@
     <Compile Include="ChampionPicksAndPosition.cs" />
     <Compile Include="ChampionPicksTurnAndPosition.cs" />
     <Compile Include="ClientCommunicator.cs" />
+    <Compile Include="CompositionRule.cs" />
     <Compile Include="EditDroolsFilesDialog.xaml.cs">
       <DependentUpon>EditDroolsFilesDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListToStringConverter.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="ResponseModel.cs" />
     <Compile Include="WindowSnapper.cs" />
-    <Page Include="Advice.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ChampionInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

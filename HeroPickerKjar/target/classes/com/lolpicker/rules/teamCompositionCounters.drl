@@ -1,0 +1,140 @@
+package com.lolpicker.rules;
+
+import com.lolpicker.model.ChampionPick;
+import com.lolpicker.model.ChampionSelect;
+import com.lolpicker.model.Champion;
+import com.lolpicker.model.Clasz;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionType;
+import java.util.ArrayList;
+
+rule "enemy team adheavy comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.adheavy)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Rammus);
+		champions.add(Champion.Malphite);
+		champions.add(Champion.Ornn);
+		champions.add(Champion.Poppy);
+		champions.add(Champion.Sejuani);
+		champions.add(Champion.DrMundo);
+		champions.add(Champion.Teemo);
+		champions.add(Champion.Graves);
+		champions.add(Champion.Quinn);
+		champions.add(Champion.Alistar);
+		champions.add(Champion.Braum);
+		champions.add(Champion.Leona);
+		champions.add(Champion.Taric);
+		champions.add(Champion.Zilean);
+		champions.add(Champion.Evelynn);
+		champions.add(Champion.Trundle);
+		champions.add(Champion.Fiddlesticks);
+		champions.add(Champion.Gangplank);
+		champions.add(Champion.Vladimir);
+		champions.add(Champion.Anivia);
+		$cs.getCompositionCounters().put("adheavy", champions);
+end
+
+rule "enemy team apheavy comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.apheavy)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Galio);
+		champions.add(Champion.ChoGath);
+		champions.add(Champion.DrMundo);
+		champions.add(Champion.Maokai);
+		champions.add(Champion.Ornn);
+		champions.add(Champion.Amumu);
+		champions.add(Champion.Sejuani);
+		champions.add(Champion.Sett);
+		champions.add(Champion.Mordekaiser);
+		champions.add(Champion.Morgana);
+		champions.add(Champion.Alistar);
+		champions.add(Champion.Braum);
+		champions.add(Champion.Taric);
+		champions.add(Champion.TahmKench);
+		champions.add(Champion.Thresh);
+		champions.add(Champion.Zilean);
+		champions.add(Champion.Zac);
+		champions.add(Champion.Trundle);
+		champions.add(Champion.Olaf);
+		$cs.getCompositionCounters().put("apheavy", champions);
+end
+
+rule "enemy team tankheavy comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.tankheavy)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Vayne);
+		champions.add(Champion.KogMaw);
+		champions.add(Champion.Jinx);
+		champions.add(Champion.Ashe);
+		champions.add(Champion.Azir);
+		champions.add(Champion.Cassiopeia);
+		champions.add(Champion.Orianna);
+		champions.add(Champion.Ryze);
+		champions.add(Champion.Sylas);
+		champions.add(Champion.ChoGath);
+		champions.add(Champion.DrMundo);
+		champions.add(Champion.Urgot);
+		champions.add(Champion.Kled);
+		champions.add(Champion.Gangplank);
+		champions.add(Champion.Gnar);
+		$cs.getCompositionCounters().put("tankheavy", champions);
+end
+
+rule "enemy team healer comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.healerheavy)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Kled);
+		champions.add(Champion.Katarina);
+		champions.add(Champion.Varus);
+		champions.add(Champion.Syndra);
+		champions.add(Champion.Orianna);
+		champions.add(Champion.Kassadin);
+		champions.add(Champion.Blitzcrank);
+		champions.add(Champion.Brand);
+		champions.add(Champion.Aphelios);
+		champions.add(Champion.ChoGath);
+		champions.add(Champion.Mordekaiser);
+		champions.add(Champion.Evelynn);
+		champions.add(Champion.Darius);
+		champions.add(Champion.Garen);
+		champions.add(Champion.Shaco);
+		$cs.getCompositionCounters().put("healerheavy", champions);
+end
+
+rule "enemy team poke comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.pokeheavy)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Soraka);
+		champions.add(Champion.Janna);
+		champions.add(Champion.Lulu);
+		champions.add(Champion.Nidalee);
+		champions.add(Champion.Vladimir);
+		champions.add(Champion.Alistar);
+		champions.add(Champion.Ashe);
+		champions.add(Champion.Azir);
+		champions.add(Champion.Blitzcrank);
+		champions.add(Champion.DrMundo);
+		champions.add(Champion.Garen);
+		champions.add(Champion.Gragas);
+		champions.add(Champion.Leona);
+		champions.add(Champion.LeeSin);
+		champions.add(Champion.Nautilus);
+		champions.add(Champion.Malphite);
+		champions.add(Champion.Warwick);
+		$cs.getCompositionCounters().put("pokeheavy", champions);
+end

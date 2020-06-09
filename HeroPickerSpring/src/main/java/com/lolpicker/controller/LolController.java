@@ -8,12 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lolpicker.dto.ChampionPickDto;
 import com.lolpicker.dto.ChampionPicksAndPositionDto;
 import com.lolpicker.dto.ChampionSelectAndPicksDto;
+import com.lolpicker.dto.CompositionRuleDto;
+import com.lolpicker.dto.MessageDto;
 import com.lolpicker.model.Champion;
 import com.lolpicker.model.ChampionPick;
 import com.lolpicker.model.Position;
@@ -50,6 +51,11 @@ public class LolController {
 			championPicks.add(new ChampionPick(Champion.valueOf(cpdto.getChampion()), cpdto.isMyTeam(), cpdto.isMyChamp()));
 		}
 		return new ResponseEntity<>(lolService.getAdvice(championPicks, Position.valueOf(position)), HttpStatus.OK);
+	}
+	
+	@PostMapping("/newRule")
+	public ResponseEntity<MessageDto> newRule(@RequestBody CompositionRuleDto compositionRule) {
+		return new ResponseEntity<>(lolService.addRule(compositionRule), HttpStatus.OK);
 	}
 	
 }

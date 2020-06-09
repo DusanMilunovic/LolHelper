@@ -1,0 +1,66 @@
+package com.lolpicker.rules;
+import com.lolpicker.model.ChampionPick;
+import com.lolpicker.model.ChampionSelect;
+import com.lolpicker.model.Champion;
+import com.lolpicker.model.Clasz;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionType;
+import com.lolpicker.model.StrongPoint;
+import com.lolpicker.model.CompositionStrongPoint;
+
+rule "enemy team, custom_2 composition"
+	no-loop
+	when
+		$ad: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.adcarry memberOf classes), count($cp))
+		$ap: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.apcarry memberOf classes), count($cp))
+		$tank: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.tank memberOf classes), count($cp))
+		$healer: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.healer memberOf classes), count($cp))
+		$poke: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == false, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.customComposition2)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.customComposition2);
+		update($cs);
+end
+rule "my team, custom_2 composition"
+	no-loop
+	when
+		$ad: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.adcarry memberOf classes), count($cp))
+		$ap: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.apcarry memberOf classes), count($cp))
+		$tank: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.tank memberOf classes), count($cp))
+		$healer: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.healer memberOf classes), count($cp))
+		$poke: Number(this >= 0) from accumulate 
+		($cp: ChampionPick(myTeam == true, Clasz.poke memberOf classes), count($cp))
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.customComposition2)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.customComposition2);
+		update($cs);
+end
+rule "enemy team custom_2 comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.customComposition2)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Alistar);
+		champions.add(Champion.Ahri);
+		champions.add(Champion.Anivia);
+		champions.add(Champion.Azir);
+		champions.add(Champion.Caitlyn);
+		champions.add(Champion.Cassiopeia);
+		champions.add(Champion.Braum);
+		champions.add(Champion.Bard);
+
+
+		$cs.getCompositionCounters().put("customComposition2", champions);
+end
+
+

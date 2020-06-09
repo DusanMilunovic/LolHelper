@@ -5,27 +5,248 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeroPickerFront"
         mc:Ignorable="d"
-        Title="EditDroolsFilesDialog" WindowState="Maximized">
+        Title="EditDroolsFilesDialog" Height="600" Width="800">
     <Grid>
-        <TabControl>
-            <TabItem Header="Basic champion info">
-                <TextBlock></TextBlock>
-            </TabItem>
-            <TabItem Header="Champions for roles">
-                <TextBlock></TextBlock>
-            </TabItem>
-            <TabItem Header="Champion positions">
-                <TextBlock></TextBlock>
-            </TabItem>
-            <TabItem Header="Team compositions">
-                <TextBlock></TextBlock>
-            </TabItem>
-            <TabItem Header="Team composition counters">
-                <TextBlock></TextBlock>
-            </TabItem>
-            <TabItem Header="Game advice">
-                <TextBlock></TextBlock>
-            </TabItem>
-        </TabControl>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Composition info
+        </Label>
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Text="{Binding Path=LeftToSelect, StringFormat='Composition counters. Please select {0} more'}">
+        </TextBlock>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Custom Composition
+        </Label>
+        <ComboBox Grid.Row="1" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="CompositionNumber">
+            <ComboBoxItem IsSelected="True">Custom composition 1</ComboBoxItem>
+            <ComboBoxItem>Custom composition 2</ComboBoxItem>
+            <ComboBoxItem>Custom composition 3</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Number of ad champions
+        </Label>
+        <ComboBox Grid.Row="2" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="AdChampions">
+            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Number of ap champions
+        </Label>
+        <ComboBox Grid.Row="3" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="ApChampions">
+            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Number of tank champions
+        </Label>
+        <ComboBox Grid.Row="4" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="TankChampions">
+            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Number of healer champions
+        </Label>
+        <ComboBox Grid.Row="5" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="HealerChampions">
+            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Number of poke champions
+        </Label>
+        <ComboBox Grid.Row="6" Grid.Column="1" Height="30" Width="150" HorizontalAlignment="Left" Name="PokeChampions">
+            <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="6" SelectionMode="Multiple" Name="SelectCounterPicks" SelectionChanged="SelectCounterPicks_SelectionChanged">
+            <ListBoxItem>Aatrox</ListBoxItem>
+            <ListBoxItem>Ahri</ListBoxItem>
+            <ListBoxItem>Akali</ListBoxItem>
+            <ListBoxItem>Alistar</ListBoxItem>
+            <ListBoxItem>Amumu</ListBoxItem>
+            <ListBoxItem>Anivia</ListBoxItem>
+            <ListBoxItem>Annie</ListBoxItem>
+            <ListBoxItem>Aphelios</ListBoxItem>
+            <ListBoxItem>Ashe</ListBoxItem>
+            <ListBoxItem>AurelionSol</ListBoxItem>
+            <ListBoxItem>Azir</ListBoxItem>
+            <ListBoxItem>Bard</ListBoxItem>
+            <ListBoxItem>Blitzcrank</ListBoxItem>
+            <ListBoxItem>Brand</ListBoxItem>
+            <ListBoxItem>Braum</ListBoxItem>
+            <ListBoxItem>Caitlyn</ListBoxItem>
+            <ListBoxItem>Camille</ListBoxItem>
+            <ListBoxItem>Cassiopeia</ListBoxItem>
+            <ListBoxItem>ChoGath</ListBoxItem>
+            <ListBoxItem>Corki</ListBoxItem>
+            <ListBoxItem>Darius</ListBoxItem>
+            <ListBoxItem>Diana</ListBoxItem>
+            <ListBoxItem>Draven</ListBoxItem>
+            <ListBoxItem>DrMundo</ListBoxItem>
+            <ListBoxItem>Ekko</ListBoxItem>
+            <ListBoxItem>Elise</ListBoxItem>
+            <ListBoxItem>Evelynn</ListBoxItem>
+            <ListBoxItem>Ezreal</ListBoxItem>
+            <ListBoxItem>Fiddlesticks</ListBoxItem>
+            <ListBoxItem>Fiora</ListBoxItem>
+            <ListBoxItem>Fizz</ListBoxItem>
+            <ListBoxItem>Galio</ListBoxItem>
+            <ListBoxItem>Gangplank</ListBoxItem>
+            <ListBoxItem>Garen</ListBoxItem>
+            <ListBoxItem>Gnar</ListBoxItem>
+            <ListBoxItem>Gragas</ListBoxItem>
+            <ListBoxItem>Graves</ListBoxItem>
+            <ListBoxItem>Hecarim</ListBoxItem>
+            <ListBoxItem>Heimerdinger</ListBoxItem>
+            <ListBoxItem>Illaoi</ListBoxItem>
+            <ListBoxItem>Irelia</ListBoxItem>
+            <ListBoxItem>Ivern</ListBoxItem>
+            <ListBoxItem>Janna</ListBoxItem>
+            <ListBoxItem>JarvanIV</ListBoxItem>
+            <ListBoxItem>Jax</ListBoxItem>
+            <ListBoxItem>Jayce</ListBoxItem>
+            <ListBoxItem>Jhin</ListBoxItem>
+            <ListBoxItem>Jinx</ListBoxItem>
+            <ListBoxItem>KaiSa</ListBoxItem>
+            <ListBoxItem>Kalista</ListBoxItem>
+            <ListBoxItem>Karma</ListBoxItem>
+            <ListBoxItem>Karthus</ListBoxItem>
+            <ListBoxItem>Kassadin</ListBoxItem>
+            <ListBoxItem>Katarina</ListBoxItem>
+            <ListBoxItem>Kayle</ListBoxItem>
+            <ListBoxItem>Kayn</ListBoxItem>
+            <ListBoxItem>Kennen</ListBoxItem>
+            <ListBoxItem>KhaZix</ListBoxItem>
+            <ListBoxItem>Kindred</ListBoxItem>
+            <ListBoxItem>Kled</ListBoxItem>
+            <ListBoxItem>KogMaw</ListBoxItem>
+            <ListBoxItem>LeBlanc</ListBoxItem>
+            <ListBoxItem>LeeSin</ListBoxItem>
+            <ListBoxItem>Leona</ListBoxItem>
+            <ListBoxItem>Lissandra</ListBoxItem>
+            <ListBoxItem>Lucian</ListBoxItem>
+            <ListBoxItem>Lulu</ListBoxItem>
+            <ListBoxItem>Lux</ListBoxItem>
+            <ListBoxItem>Malphite</ListBoxItem>
+            <ListBoxItem>Malzahar</ListBoxItem>
+            <ListBoxItem>Maokai</ListBoxItem>
+            <ListBoxItem>MasterYi</ListBoxItem>
+            <ListBoxItem>MissFortune</ListBoxItem>
+            <ListBoxItem>Mordekaiser</ListBoxItem>
+            <ListBoxItem>Morgana</ListBoxItem>
+            <ListBoxItem>Nami</ListBoxItem>
+            <ListBoxItem>Nasus</ListBoxItem>
+            <ListBoxItem>Nautilus</ListBoxItem>
+            <ListBoxItem>Neeko</ListBoxItem>
+            <ListBoxItem>Nidalee</ListBoxItem>
+            <ListBoxItem>Nocturne</ListBoxItem>
+            <ListBoxItem>NunuAndWillump</ListBoxItem>
+            <ListBoxItem>Olaf</ListBoxItem>
+            <ListBoxItem>Orianna</ListBoxItem>
+            <ListBoxItem>Ornn</ListBoxItem>
+            <ListBoxItem>Pantheon</ListBoxItem>
+            <ListBoxItem>Poppy</ListBoxItem>
+            <ListBoxItem>Pyke</ListBoxItem>
+            <ListBoxItem>Qiyana</ListBoxItem>
+            <ListBoxItem>Quinn</ListBoxItem>
+            <ListBoxItem>Rakan</ListBoxItem>
+            <ListBoxItem>Rammus</ListBoxItem>
+            <ListBoxItem>RekSai</ListBoxItem>
+            <ListBoxItem>Renekton</ListBoxItem>
+            <ListBoxItem>Rengar</ListBoxItem>
+            <ListBoxItem>Riven</ListBoxItem>
+            <ListBoxItem>Rumble</ListBoxItem>
+            <ListBoxItem>Ryze</ListBoxItem>
+            <ListBoxItem>Sejuani</ListBoxItem>
+            <ListBoxItem>Senna</ListBoxItem>
+            <ListBoxItem>Sett</ListBoxItem>
+            <ListBoxItem>Shaco</ListBoxItem>
+            <ListBoxItem>Shen</ListBoxItem>
+            <ListBoxItem>Shyvana</ListBoxItem>
+            <ListBoxItem>Singed</ListBoxItem>
+            <ListBoxItem>Sion</ListBoxItem>
+            <ListBoxItem>Sivir</ListBoxItem>
+            <ListBoxItem>Skarner</ListBoxItem>
+            <ListBoxItem>Sona</ListBoxItem>
+            <ListBoxItem>Soraka</ListBoxItem>
+            <ListBoxItem>Swain</ListBoxItem>
+            <ListBoxItem>Sylas</ListBoxItem>
+            <ListBoxItem>Syndra</ListBoxItem>
+            <ListBoxItem>TahmKench</ListBoxItem>
+            <ListBoxItem>Taliyah</ListBoxItem>
+            <ListBoxItem>Talon</ListBoxItem>
+            <ListBoxItem>Taric</ListBoxItem>
+            <ListBoxItem>Teemo</ListBoxItem>
+            <ListBoxItem>Thresh</ListBoxItem>
+            <ListBoxItem>Tristana</ListBoxItem>
+            <ListBoxItem>Trundle</ListBoxItem>
+            <ListBoxItem>Tryndamere</ListBoxItem>
+            <ListBoxItem>TwistedFate</ListBoxItem>
+            <ListBoxItem>Twitch</ListBoxItem>
+            <ListBoxItem>Udyr</ListBoxItem>
+            <ListBoxItem>Urgot</ListBoxItem>
+            <ListBoxItem>Varus</ListBoxItem>
+            <ListBoxItem>Vayne</ListBoxItem>
+            <ListBoxItem>Veigar</ListBoxItem>
+            <ListBoxItem>VelKoz</ListBoxItem>
+            <ListBoxItem>Vi</ListBoxItem>
+            <ListBoxItem>Viktor</ListBoxItem>
+            <ListBoxItem>Vladimir</ListBoxItem>
+            <ListBoxItem>Volibear</ListBoxItem>
+            <ListBoxItem>Warwick</ListBoxItem>
+            <ListBoxItem>Wukong</ListBoxItem>
+            <ListBoxItem>Xayah</ListBoxItem>
+            <ListBoxItem>Xerath</ListBoxItem>
+            <ListBoxItem>XinZhao</ListBoxItem>
+            <ListBoxItem>Yasuo</ListBoxItem>
+            <ListBoxItem>Yorick</ListBoxItem>
+            <ListBoxItem>Yuumi</ListBoxItem>
+            <ListBoxItem>Zac</ListBoxItem>
+            <ListBoxItem>Zed</ListBoxItem>
+            <ListBoxItem>Ziggs</ListBoxItem>
+            <ListBoxItem>Zilean</ListBoxItem>
+            <ListBoxItem>Zoe</ListBoxItem>
+            <ListBoxItem>Zyra</ListBoxItem>
+        </ListBox>
+        <Button Grid.Row="8" Grid.ColumnSpan="3" Width="180" Height="30" Name="UploadButton" Click="UploadButton_Click" IsEnabled="False">Upload rule</Button>
+        <TextBlock Grid.Row="9" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{Binding ErrorMessage}"></TextBlock>
     </Grid>
 </Window>

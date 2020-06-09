@@ -303,7 +303,7 @@ namespace HeroPickerFront
                             MainContent += ", ";
                         }
                     }
-                    MainContent += "/n/n";
+                    MainContent += "\n\n";
                 }
                 List<string> bestChampions = cpcs.ChampionSelect.ChampsForPosition.ToList();
                 List<string> compCounters = new List<string>();
@@ -324,7 +324,7 @@ namespace HeroPickerFront
                             MainContent += ", ";
                         }
                     }
-                    MainContent += "\nThese champions are good against their team composition and are playable in the " + cpcs.ChampionSelect.MyPosition + " position\n\n";
+                    MainContent += "\nThese champions are good against their team composition and are playable in the " + cpcs.ChampionSelect.MyPosition + " position \n \n";
                 } 
 
                 List<string> positionChampions = cpcs.ChampionSelect.ChampsForPosition.ToList();
@@ -347,7 +347,7 @@ namespace HeroPickerFront
                             MainContent += ", ";
                         }
                     }
-                    MainContent += "\n\n";
+                    MainContent += "\n \n";
                 }
                 
                 foreach (KeyValuePair<string, List<string>> entry in cpcs.ChampionSelect.CompositionCounters)
@@ -361,7 +361,7 @@ namespace HeroPickerFront
                             MainContent += ", ";
                         }
                     }
-                    MainContent += "\n\n";
+                    MainContent += "\n \n";
                 }
 
             }
@@ -462,24 +462,8 @@ namespace HeroPickerFront
             }
 
             var result = retval.Result;
-            //championpick cp1 = new championpick("aatrox", true, false);
-            //ChampionPick cp2 = new ChampionPick("Lulu", true, false);
-            //ChampionPick cp3 = new ChampionPick("Akali", true, false);
-            //ChampionPick cp4 = new ChampionPick("KhaZix", false, false);
-            //ChampionPick cp5 = new ChampionPick("Syndra", false, false);
-            //ChampionPick cp6 = new ChampionPick("Lux", false, false);
-            //ChampionPick cp7 = new ChampionPick("Garen", false, false);
-            //List<ChampionPick> champions = new List<ChampionPick>();
-            //champions.Add(cp1);
-            //champions.Add(cp2);
-            //champions.Add(cp3);
-            //champions.Add(cp4);
-            //champions.Add(cp5);
-            //champions.Add(cp6);
-            //champions.Add(cp7);
 
             Console.WriteLine("SEND IT");
-            //var result = new ChampionPicksTurnAndPosition(champions, true, "bot"); 
             if (result.picks.Count() > 0 && result.picks.Count() < 10)
             {
                 Console.WriteLine("PICK---------------------------------------------------------------");

@@ -182,11 +182,11 @@ namespace HeroPickerFront
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             System.Net.ServicePointManager.ServerCertificateValidationCallback =
             ((sender, certificate, chain, sslPolicyErrors) => true);
-            var client = new RestClient("https://127.0.0.1:2391/lol-champ-select/v1/session");
+            var client = new RestClient("https://127.0.0.1:32519/lol-champ-select/v1/session");
             client.Timeout = -1;
             var request = new RestRequest("");
             request.AddHeader("Accept", "application/json");
-            request.AddHeader("Authorization", "Basic cmlvdDo4YllsS1RiY19ja0R4WUpMWmtBS3FB");
+            request.AddHeader("Authorization", "Basic cmlvdDo3S0t0c29CMzNGY05tODdYbENsbE1B");
             var response = await client.GetAsync<ResponseModel>(request);
             var myActorCellId = response.LocalPlayerCellId;
             if (response.Actions == null)
