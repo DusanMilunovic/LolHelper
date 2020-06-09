@@ -1,0 +1,31 @@
+﻿<Window x:Class="HeroPickerFront.EditDroolsFilesDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeroPickerFront"
+        mc:Ignorable="d"
+        Title="EditDroolsFilesDialog" WindowState="Maximized">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Basic champion info">
+                <TextBlock></TextBlock>
+            </TabItem>
+            <TabItem Header="Champions for roles">
+                <TextBlock></TextBlock>
+            </TabItem>
+            <TabItem Header="Champion positions">
+                <TextBlock></TextBlock>
+            </TabItem>
+            <TabItem Header="Team compositions">
+                <TextBlock></TextBlock>
+            </TabItem>
+            <TabItem Header="Team composition counters">
+                <TextBlock></TextBlock>
+            </TabItem>
+            <TabItem Header="Game advice">
+                <TextBlock></TextBlock>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,11 +1,12 @@
 package com.lolpicker.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ChampionSelect {
 	private ArrayList<Champion> champsForPosition = new ArrayList<>();
 //	private ArrayList<Champion> counterPicks = new ArrayList<>();
-	private ArrayList<Champion> compositionCounters = new ArrayList<>();
+	private HashMap<String, ArrayList<Champion>> compositionCounters = new HashMap<>();
 	private ArrayList<String> compositionCountersAdvice = new ArrayList<>();
 	//todo mozda moram dodati update u pravila u fajlu roleChampions.drl
 //	private ArrayList<Champion> topTierChampions = new ArrayList<>();
@@ -47,10 +48,10 @@ public class ChampionSelect {
 //	public void setCounterPicks(ArrayList<Champion> counterPicks) {
 //		this.counterPicks = counterPicks;
 //	}
-	public ArrayList<Champion> getCompositionCounters() {
+	public HashMap<String, ArrayList<Champion>> getCompositionCounters() {
 		return compositionCounters;
 	}
-	public void setCompositionCounters(ArrayList<Champion> compositionCounters) {
+	public void setCompositionCounters(HashMap<String, ArrayList<Champion>> compositionCounters) {
 		this.compositionCounters = compositionCounters;
 	}
 	public ArrayList<CompositionType> getEnemyTeamComposition() {

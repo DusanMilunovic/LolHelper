@@ -1,7 +1,41 @@
 package com.lolpicker.tests;
 
+import static com.lolpicker.model.Champion.Aatrox;
+import static com.lolpicker.model.Champion.Annie;
+import static com.lolpicker.model.Champion.Ashe;
+import static com.lolpicker.model.Champion.Azir;
+import static com.lolpicker.model.Champion.ChoGath;
+import static com.lolpicker.model.Champion.DrMundo;
+import static com.lolpicker.model.Champion.Galio;
+import static com.lolpicker.model.Champion.Heimerdinger;
+import static com.lolpicker.model.Champion.Janna;
+import static com.lolpicker.model.Champion.Jayce;
+import static com.lolpicker.model.Champion.Jinx;
+import static com.lolpicker.model.Champion.Katarina;
+import static com.lolpicker.model.Champion.Kled;
+import static com.lolpicker.model.Champion.KogMaw;
+import static com.lolpicker.model.Champion.Lissandra;
+import static com.lolpicker.model.Champion.Lulu;
+import static com.lolpicker.model.Champion.Malphite;
+import static com.lolpicker.model.Champion.Maokai;
+import static com.lolpicker.model.Champion.Nautilus;
+import static com.lolpicker.model.Champion.Nidalee;
+import static com.lolpicker.model.Champion.Orianna;
+import static com.lolpicker.model.Champion.Ornn;
+import static com.lolpicker.model.Champion.Poppy;
+import static com.lolpicker.model.Champion.Rammus;
+import static com.lolpicker.model.Champion.Sejuani;
+import static com.lolpicker.model.Champion.Senna;
+import static com.lolpicker.model.Champion.Soraka;
+import static com.lolpicker.model.Champion.Syndra;
+import static com.lolpicker.model.Champion.Varus;
+import static com.lolpicker.model.Champion.Vayne;
+import static com.lolpicker.model.Champion.Vladimir;
+import static com.lolpicker.model.Champion.Yasuo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,8 +43,8 @@ import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
+import com.lolpicker.model.Champion;
 import com.lolpicker.model.ChampionPick;
-import static com.lolpicker.model.Champion.*;
 import com.lolpicker.model.ChampionSelect;
 import com.lolpicker.model.Position;
 
@@ -39,12 +73,14 @@ public class TeamCompositionCountersTests {
 		kSession.insert(senna);
 		kSession.insert(vayne);
 		kSession.fireAllRules();
-		assertEquals(20, championSelect.getCompositionCounters().size());
-		assertTrue(championSelect.getCompositionCounters().contains(Rammus));
-		assertTrue(championSelect.getCompositionCounters().contains(Malphite));
-		assertTrue(championSelect.getCompositionCounters().contains(Ornn));
-		assertTrue(championSelect.getCompositionCounters().contains(Poppy));
-		assertTrue(championSelect.getCompositionCounters().contains(Sejuani));
+		assertTrue(championSelect.getCompositionCounters().containsKey("adheavy"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("adheavy"); 
+		assertEquals(20, champions.size());
+		assertTrue(champions.contains(Rammus));
+		assertTrue(champions.contains(Malphite));
+		assertTrue(champions.contains(Ornn));
+		assertTrue(champions.contains(Poppy));
+		assertTrue(champions.contains(Sejuani));
 	}
 
 	@Test
@@ -61,12 +97,14 @@ public class TeamCompositionCountersTests {
 		kSession.insert(lissandra);
 		kSession.insert(heimerdinger);
 		kSession.fireAllRules();
-		assertEquals(19, championSelect.getCompositionCounters().size());
-		assertTrue(championSelect.getCompositionCounters().contains(Galio));
-		assertTrue(championSelect.getCompositionCounters().contains(ChoGath));
-		assertTrue(championSelect.getCompositionCounters().contains(DrMundo));
-		assertTrue(championSelect.getCompositionCounters().contains(Maokai));
-		assertTrue(championSelect.getCompositionCounters().contains(Ornn));
+		assertTrue(championSelect.getCompositionCounters().containsKey("apheavy"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("apheavy"); 
+		assertEquals(19, champions.size());
+		assertTrue(champions.contains(Galio));
+		assertTrue(champions.contains(ChoGath));
+		assertTrue(champions.contains(DrMundo));
+		assertTrue(champions.contains(Maokai));
+		assertTrue(champions.contains(Ornn));
 	}
 
 	@Test
@@ -81,12 +119,14 @@ public class TeamCompositionCountersTests {
 		kSession.insert(ornn);
 		kSession.insert(nautilus);
 		kSession.fireAllRules();
-		assertEquals(15, championSelect.getCompositionCounters().size());
-		assertTrue(championSelect.getCompositionCounters().contains(Vayne));
-		assertTrue(championSelect.getCompositionCounters().contains(KogMaw));
-		assertTrue(championSelect.getCompositionCounters().contains(Jinx));
-		assertTrue(championSelect.getCompositionCounters().contains(Ashe));
-		assertTrue(championSelect.getCompositionCounters().contains(Azir));
+		assertTrue(championSelect.getCompositionCounters().containsKey("tankheavy"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("tankheavy"); 
+		assertEquals(15, champions.size());
+		assertTrue(champions.contains(Vayne));
+		assertTrue(champions.contains(KogMaw));
+		assertTrue(champions.contains(Jinx));
+		assertTrue(champions.contains(Ashe));
+		assertTrue(champions.contains(Azir));
 	}
 
 	@Test
@@ -101,12 +141,14 @@ public class TeamCompositionCountersTests {
 		kSession.insert(senna);
 		kSession.insert(vladimir);
 		kSession.fireAllRules();
-		assertEquals(15, championSelect.getCompositionCounters().size());
-		assertTrue(championSelect.getCompositionCounters().contains(Kled));
-		assertTrue(championSelect.getCompositionCounters().contains(Katarina));
-		assertTrue(championSelect.getCompositionCounters().contains(Varus));
-		assertTrue(championSelect.getCompositionCounters().contains(Syndra));
-		assertTrue(championSelect.getCompositionCounters().contains(Orianna));
+		assertTrue(championSelect.getCompositionCounters().containsKey("healerheavy"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("healerheavy"); 
+		assertEquals(15, champions.size());
+		assertTrue(champions.contains(Kled));
+		assertTrue(champions.contains(Katarina));
+		assertTrue(champions.contains(Varus));
+		assertTrue(champions.contains(Syndra));
+		assertTrue(champions.contains(Orianna));
 	}
 
 	@Test
@@ -121,12 +163,14 @@ public class TeamCompositionCountersTests {
 		kSession.insert(nidalee);
 		kSession.insert(varus);
 		kSession.fireAllRules();
-		assertEquals(17, championSelect.getCompositionCounters().size());
-		assertTrue(championSelect.getCompositionCounters().contains(Soraka));
-		assertTrue(championSelect.getCompositionCounters().contains(Janna));
-		assertTrue(championSelect.getCompositionCounters().contains(Lulu));
-		assertTrue(championSelect.getCompositionCounters().contains(Nidalee));
-		assertTrue(championSelect.getCompositionCounters().contains(Vladimir));
+		assertTrue(championSelect.getCompositionCounters().containsKey("pokeheavy"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("pokeheavy"); 
+		assertEquals(17, champions.size());
+		assertTrue(champions.contains(Soraka));
+		assertTrue(champions.contains(Janna));
+		assertTrue(champions.contains(Lulu));
+		assertTrue(champions.contains(Nidalee));
+		assertTrue(champions.contains(Vladimir));
 	}
 
 }
