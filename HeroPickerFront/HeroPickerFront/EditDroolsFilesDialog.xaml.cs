@@ -102,18 +102,26 @@ namespace HeroPickerFront
             request.AddParameter("application/json", cr.ToJson(), ParameterType.RequestBody);
             Task<Message> retval2 = client.PostAsync<Message>(request);
             retval2.Wait();
-            Message result = retval2.Result;
-            this.Dispatcher.BeginInvoke(new System.Action(() =>
+
+            if (retval2.Result == null)
             {
-                if (result.message == "Success")
+                ErrorMessage = "There has been too many requests from your IP address. If this is a false alert, try to use the service later again.";
+            }
+            else
+            {
+                Message result = retval2.Result;
+                this.Dispatcher.BeginInvoke(new System.Action(() =>
                 {
-                    this.Close();
-                }
-                else
-                {
-                    ErrorMessage = result.message;
-                }
-            }));
+                    if (result.message == "Success")
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        ErrorMessage = result.message;
+                    }
+                }));
+            }
         }
     }
 }

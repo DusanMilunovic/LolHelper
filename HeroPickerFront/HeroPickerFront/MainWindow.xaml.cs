@@ -473,11 +473,18 @@ namespace HeroPickerFront
                 request.AddHeader("content-type", "application/json");
                 ChampionPicksAndPosition cpp = new ChampionPicksAndPosition(result.picks, result.position);
                 request.AddParameter("application/json", cpp.toJson(), ParameterType.RequestBody);
-                IRestResponse response = client.Execute(request);
+                //IRestResponse response = client.Execute(request);
                 Task<ChampionPicksAndChampionSelect> retval2 = client.PostAsync<ChampionPicksAndChampionSelect>(request);
                 retval2.Wait();
-                cpcs = retval2.Result;
-                UpdateUI(true);
+                if (retval2.Result == null)
+                {
+                    ResetUI(true);
+                    MainContent = "There has been too many requests from your IP address. If this is a false alert, try to use the service later again.";
+                }
+                else {
+                    cpcs = retval2.Result;
+                    UpdateUI(true);
+                }
             }
             else if (result.picks.Count() == 10)
             {
@@ -488,11 +495,18 @@ namespace HeroPickerFront
                 request.AddHeader("content-type", "application/json");
                 ChampionPicksAndPosition cpp = new ChampionPicksAndPosition(result.picks, result.position);
                 request.AddParameter("application/json", cpp.toJson(), ParameterType.RequestBody);
-                IRestResponse response = client.Execute(request);
+                //IRestResponse response = client.Execute(request);
                 Task<ChampionPicksAndChampionSelect> retval2 = client.PostAsync<ChampionPicksAndChampionSelect>(request);
                 retval2.Wait();
-                cpcs = retval2.Result;
-                UpdateUI(false);
+                if (retval2.Result == null)
+                {
+                    ResetUI(true);
+                    MainContent = "There has been too many requests from your IP address. If this is a false alert, try to use the service later again.";
+                } else
+                {
+                    cpcs = retval2.Result;
+                    UpdateUI(false);
+                }
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;

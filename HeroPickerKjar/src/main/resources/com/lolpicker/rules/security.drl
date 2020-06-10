@@ -1,0 +1,18 @@
+package com.lolpicker.rules;
+
+import com.lolpicker.model.RequestIp;
+
+rule "More than 30 requests from the same ip over the last minute"
+    when
+        $ri1: RequestIp($ip: ipAddress)
+        Number(intValue >= 30) from accumulate(
+            $ri2: RequestIp(
+                this != $ri1, 
+                ipAddress == $ip, 
+                this meets[1m] $ri1
+            ),
+            count($ri2)
+        )
+    then
+        $ri1.setSuspicious(true);
+end

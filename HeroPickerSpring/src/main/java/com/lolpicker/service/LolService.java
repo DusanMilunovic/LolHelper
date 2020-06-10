@@ -35,9 +35,10 @@ public class LolService {
 	private final KieContainer kieContainer;
 
 	@Autowired
-	public LolService(KieContainer kieContainer) {
+	public LolService(KieContainer kieContainer, KieSession kieSession) {
 		this.kieContainer = kieContainer;
 	}
+
 	
 	public ChampionSelectAndPicksDto getPicks(ArrayList<ChampionPick> championPicks, Position position) {
 		KieSession kSession = kieContainer.newKieSession();
