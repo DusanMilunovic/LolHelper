@@ -6,6 +6,7 @@ import com.lolpicker.model.Clasz;
 import com.lolpicker.model.Champion;
 
 rule "Aatrox picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Aatrox)
 	then
@@ -20,6 +21,7 @@ rule "Aatrox picked"
 end
 
 rule "Ahri picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ahri)
 	then
@@ -34,6 +36,7 @@ rule "Ahri picked"
 end
 
 rule "Akali picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Akali)
 	then
@@ -48,6 +51,7 @@ rule "Akali picked"
 end
 
 rule "Alistar picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Alistar)
 	then
@@ -62,6 +66,7 @@ rule "Alistar picked"
 end
 
 rule "Amumu picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Amumu)
 	then
@@ -76,6 +81,7 @@ rule "Amumu picked"
 end
 
 rule "Anivia picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Anivia)
 	then
@@ -90,6 +96,7 @@ rule "Anivia picked"
 end
 
 rule "Annie picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Annie)
 	then
@@ -104,6 +111,7 @@ rule "Annie picked"
 end
 
 rule "Aphelios picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Aphelios)
 	then
@@ -118,6 +126,7 @@ rule "Aphelios picked"
 end
 
 rule "Ashe picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ashe)
 	then
@@ -132,6 +141,7 @@ rule "Ashe picked"
 end
 
 rule "AurelionSol picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.AurelionSol)
 	then
@@ -146,6 +156,7 @@ rule "AurelionSol picked"
 end
 
 rule "Azir picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Azir)
 	then
@@ -161,6 +172,7 @@ rule "Azir picked"
 end
 
 rule "Bard picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Bard)
 	then
@@ -175,6 +187,7 @@ rule "Bard picked"
 end
 
 rule "Blitzcrank picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Blitzcrank)
 	then
@@ -189,6 +202,7 @@ rule "Blitzcrank picked"
 end
 
 rule "Brand picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Brand)
 	then
@@ -203,6 +217,7 @@ rule "Brand picked"
 end
 
 rule "Braum picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Braum)
 	then
@@ -217,6 +232,7 @@ rule "Braum picked"
 end
 
 rule "Caitlyn picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Caitlyn)
 	then
@@ -231,6 +247,7 @@ rule "Caitlyn picked"
 end
 
 rule "Camille picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Camille)
 	then
@@ -245,6 +262,7 @@ rule "Camille picked"
 end
 
 rule "Cassiopeia picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Cassiopeia)
 	then
@@ -259,6 +277,7 @@ rule "Cassiopeia picked"
 end
 
 rule "ChoGath picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.ChoGath)
 	then
@@ -274,6 +293,7 @@ rule "ChoGath picked"
 end
 
 rule "Corki picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Corki)
 	then
@@ -289,6 +309,7 @@ rule "Corki picked"
 end
 
 rule "Darius picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Darius)
 	then
@@ -303,6 +324,7 @@ rule "Darius picked"
 end
 
 rule "Diana picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Diana)
 	then
@@ -317,6 +339,7 @@ rule "Diana picked"
 end
 
 rule "DrMundo picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.DrMundo)
 	then
@@ -332,6 +355,7 @@ rule "DrMundo picked"
 end
 
 rule "Draven picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Draven)
 	then
@@ -343,6 +367,7 @@ rule "Draven picked"
 end
 
 rule "Ekko picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ekko)
 	then
@@ -357,6 +382,7 @@ rule "Ekko picked"
 end
 
 rule "Elise picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Elise)
 	then
@@ -371,6 +397,7 @@ rule "Elise picked"
 end
 
 rule "Evelynn picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Evelynn)
 	then
@@ -385,6 +412,7 @@ rule "Evelynn picked"
 end
 
 rule "Ezreal picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ezreal)
 	then
@@ -400,6 +428,7 @@ rule "Ezreal picked"
 end
 
 rule "Fiddlesticks picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Fiddlesticks)
 	then
@@ -415,6 +444,7 @@ rule "Fiddlesticks picked"
 end
 
 rule "Fiora picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Fiora)
 	then
@@ -429,6 +459,7 @@ rule "Fiora picked"
 end
 
 rule "Fizz picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Fizz)
 	then
@@ -443,6 +474,7 @@ rule "Fizz picked"
 end
 
 rule "Galio picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Galio)
 	then
@@ -458,6 +490,7 @@ rule "Galio picked"
 end
 
 rule "Gangplank picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Gangplank)
 	then
@@ -472,6 +505,7 @@ rule "Gangplank picked"
 end
 
 rule "Garen picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Garen)
 	then
@@ -487,6 +521,7 @@ rule "Garen picked"
 end
 
 rule "Gnar picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Gnar)
 	then
@@ -502,6 +537,7 @@ rule "Gnar picked"
 end
 
 rule "Gragas picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Gragas)
 	then
@@ -516,6 +552,7 @@ rule "Gragas picked"
 end
 
 rule "Graves picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Graves)
 	then
@@ -530,6 +567,7 @@ rule "Graves picked"
 end
 
 rule "Hecarim picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Hecarim)
 	then
@@ -544,6 +582,7 @@ rule "Hecarim picked"
 end
 
 rule "Heimerdinger picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Heimerdinger)
 	then
@@ -558,6 +597,7 @@ rule "Heimerdinger picked"
 end
 
 rule "Illaoi picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Illaoi)
 	then
@@ -573,6 +613,7 @@ rule "Illaoi picked"
 end
 
 rule "Irelia picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Irelia)
 	then
@@ -587,6 +628,7 @@ rule "Irelia picked"
 end
 
 rule "Ivern picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ivern)
 	then
@@ -600,6 +642,7 @@ rule "Ivern picked"
 end
 
 rule "Janna picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Janna)
 	then
@@ -614,6 +657,7 @@ rule "Janna picked"
 end
 
 rule "JarvanIV picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.JarvanIV)
 	then
@@ -629,6 +673,7 @@ rule "JarvanIV picked"
 end
 
 rule "Jax picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Jax)
 	then
@@ -643,6 +688,7 @@ rule "Jax picked"
 end
 
 rule "Jayce picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Jayce)
 	then
@@ -658,6 +704,7 @@ rule "Jayce picked"
 end
 
 rule "Jhin picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Jhin)
 	then
@@ -672,6 +719,7 @@ rule "Jhin picked"
 end
 
 rule "Jinx picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Jinx)
 	then
@@ -686,6 +734,7 @@ rule "Jinx picked"
 end
 
 rule "KaiSa picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.KaiSa)
 	then
@@ -700,6 +749,7 @@ rule "KaiSa picked"
 end
 
 rule "Kalista picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kalista)
 	then
@@ -714,6 +764,7 @@ rule "Kalista picked"
 end
 
 rule "Karma picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Karma)
 	then
@@ -729,6 +780,7 @@ rule "Karma picked"
 end
 
 rule "Karthus picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Karthus)
 	then
@@ -743,6 +795,7 @@ rule "Karthus picked"
 end
 
 rule "Kassadin picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kassadin)
 	then
@@ -757,6 +810,7 @@ rule "Kassadin picked"
 end
 
 rule "Katarina picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Katarina)
 	then
@@ -771,6 +825,7 @@ rule "Katarina picked"
 end
 
 rule "Kayle picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kayle)
 	then
@@ -785,6 +840,7 @@ rule "Kayle picked"
 end
 
 rule "Kayn picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kayn)
 	then
@@ -799,6 +855,7 @@ rule "Kayn picked"
 end
 
 rule "Kennen picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kennen)
 	then
@@ -813,6 +870,7 @@ rule "Kennen picked"
 end
 
 rule "KhaZix picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.KhaZix)
 	then
@@ -827,6 +885,7 @@ rule "KhaZix picked"
 end
 
 rule "Kindred picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kindred)
 	then
@@ -841,6 +900,7 @@ rule "Kindred picked"
 end
 
 rule "Kled picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Kled)
 	then
@@ -853,6 +913,7 @@ rule "Kled picked"
 end
 
 rule "KogMaw picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.KogMaw)
 	then
@@ -867,6 +928,7 @@ rule "KogMaw picked"
 end
 
 rule "LeBlanc picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.LeBlanc)
 	then
@@ -881,6 +943,7 @@ rule "LeBlanc picked"
 end
 
 rule "LeeSin picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.LeeSin)
 	then
@@ -895,6 +958,7 @@ rule "LeeSin picked"
 end
 
 rule "Leona picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Leona)
 	then
@@ -909,6 +973,7 @@ rule "Leona picked"
 end
 
 rule "Lissandra picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Lissandra)
 	then
@@ -923,6 +988,7 @@ rule "Lissandra picked"
 end
 
 rule "Lucian picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Lucian)
 	then
@@ -937,6 +1003,7 @@ rule "Lucian picked"
 end
 
 rule "Lulu picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Lulu)
 	then
@@ -950,6 +1017,7 @@ rule "Lulu picked"
 end
 
 rule "Lux picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Lux)
 	then
@@ -965,6 +1033,7 @@ rule "Lux picked"
 end
 
 rule "Malphite picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Malphite)
 	then
@@ -979,6 +1048,7 @@ rule "Malphite picked"
 end
 
 rule "Malzahar picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Malzahar)
 	then
@@ -993,6 +1063,7 @@ rule "Malzahar picked"
 end
 
 rule "Maokai picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Maokai)
 	then
@@ -1008,6 +1079,7 @@ rule "Maokai picked"
 end
 
 rule "MasterYi picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.MasterYi)
 	then
@@ -1022,6 +1094,7 @@ rule "MasterYi picked"
 end
 
 rule "MissFortune picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.MissFortune)
 	then
@@ -1036,6 +1109,7 @@ rule "MissFortune picked"
 end
 
 rule "Mordekaiser picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Mordekaiser)
 	then
@@ -1050,6 +1124,7 @@ rule "Mordekaiser picked"
 end
 
 rule "Morgana picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Morgana)
 	then
@@ -1064,6 +1139,7 @@ rule "Morgana picked"
 end
 
 rule "Nami picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Nami)
 	then
@@ -1078,6 +1154,7 @@ rule "Nami picked"
 end
 
 rule "Nasus picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Nasus)
 	then
@@ -1092,6 +1169,7 @@ rule "Nasus picked"
 end
 
 rule "Nautilus picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Nautilus)
 	then
@@ -1106,6 +1184,7 @@ rule "Nautilus picked"
 end
 
 rule "Neeko picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Neeko)
 	then
@@ -1120,6 +1199,7 @@ rule "Neeko picked"
 end
 
 rule "Nidalee picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Nidalee)
 	then
@@ -1136,6 +1216,7 @@ rule "Nidalee picked"
 end
 
 rule "Nocturne picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Nocturne)
 	then
@@ -1150,6 +1231,7 @@ rule "Nocturne picked"
 end
 
 rule "NunuAndWillump picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.NunuAndWillump)
 	then
@@ -1164,6 +1246,7 @@ rule "NunuAndWillump picked"
 end
 
 rule "Olaf picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Olaf)
 	then
@@ -1178,6 +1261,7 @@ rule "Olaf picked"
 end
 
 rule "Orianna picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Orianna)
 	then
@@ -1192,6 +1276,7 @@ rule "Orianna picked"
 end
 
 rule "Ornn picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ornn)
 	then
@@ -1206,6 +1291,7 @@ rule "Ornn picked"
 end
 
 rule "Pantheon picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Pantheon)
 	then
@@ -1217,6 +1303,7 @@ rule "Pantheon picked"
 end
 
 rule "Poppy picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Poppy)
 	then
@@ -1231,6 +1318,7 @@ rule "Poppy picked"
 end
 
 rule "Pyke picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Pyke)
 	then
@@ -1245,6 +1333,7 @@ rule "Pyke picked"
 end
 
 rule "Qiyana picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Qiyana)
 	then
@@ -1259,6 +1348,7 @@ rule "Qiyana picked"
 end
 
 rule "Quinn picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Quinn)
 	then
@@ -1273,6 +1363,7 @@ rule "Quinn picked"
 end
 
 rule "Rakan picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Rakan)
 	then
@@ -1286,6 +1377,7 @@ rule "Rakan picked"
 end
 
 rule "Rammus picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Rammus)
 	then
@@ -1300,6 +1392,7 @@ rule "Rammus picked"
 end
 
 rule "RekSai picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.RekSai)
 	then
@@ -1313,6 +1406,7 @@ rule "RekSai picked"
 end
 
 rule "Renekton picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Renekton)
 	then
@@ -1327,6 +1421,7 @@ rule "Renekton picked"
 end
 
 rule "Rengar picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Rengar)
 	then
@@ -1341,6 +1436,7 @@ rule "Rengar picked"
 end
 
 rule "Riven picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Riven)
 	then
@@ -1355,6 +1451,7 @@ rule "Riven picked"
 end
 
 rule "Rumble picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Rumble)
 	then
@@ -1369,6 +1466,7 @@ rule "Rumble picked"
 end
 
 rule "Ryze picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ryze)
 	then
@@ -1383,6 +1481,7 @@ rule "Ryze picked"
 end
 
 rule "Sejuani picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sejuani)
 	then
@@ -1397,6 +1496,7 @@ rule "Sejuani picked"
 end
 
 rule "Senna picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Senna)
 	then
@@ -1412,6 +1512,7 @@ rule "Senna picked"
 end
 
 rule "Sett picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sett)
 	then
@@ -1427,6 +1528,7 @@ rule "Sett picked"
 end
 
 rule "Shaco picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Shaco)
 	then
@@ -1441,6 +1543,7 @@ rule "Shaco picked"
 end
 
 rule "Shen picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Shen)
 	then
@@ -1455,6 +1558,7 @@ rule "Shen picked"
 end
 
 rule "Shyvana picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Shyvana)
 	then
@@ -1469,6 +1573,7 @@ rule "Shyvana picked"
 end
 
 rule "Singed picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Singed)
 	then
@@ -1484,6 +1589,7 @@ rule "Singed picked"
 end
 
 rule "Sion picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sion)
 	then
@@ -1498,6 +1604,7 @@ rule "Sion picked"
 end
 
 rule "Sivir picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sivir)
 	then
@@ -1512,6 +1619,7 @@ rule "Sivir picked"
 end
 
 rule "Skarner picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Skarner)
 	then
@@ -1526,6 +1634,7 @@ rule "Skarner picked"
 end
 
 rule "Sona picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sona)
 	then
@@ -1540,6 +1649,7 @@ rule "Sona picked"
 end
 
 rule "Soraka picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Soraka)
 	then
@@ -1554,6 +1664,7 @@ rule "Soraka picked"
 end
 
 rule "Swain picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Swain)
 	then
@@ -1568,6 +1679,7 @@ rule "Swain picked"
 end
 
 rule "Sylas picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Sylas)
 	then
@@ -1582,6 +1694,7 @@ rule "Sylas picked"
 end
 
 rule "Syndra picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Syndra)
 	then
@@ -1596,6 +1709,7 @@ rule "Syndra picked"
 end
 
 rule "TahmKench picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.TahmKench)
 	then
@@ -1610,6 +1724,7 @@ rule "TahmKench picked"
 end
 
 rule "Taliyah picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Taliyah)
 	then
@@ -1621,6 +1736,7 @@ rule "Taliyah picked"
 end
 
 rule "Talon picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Talon)
 	then
@@ -1635,6 +1751,7 @@ rule "Talon picked"
 end
 
 rule "Taric picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Taric)
 	then
@@ -1650,6 +1767,7 @@ rule "Taric picked"
 end
 
 rule "Teemo picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Teemo)
 	then
@@ -1664,6 +1782,7 @@ rule "Teemo picked"
 end
 
 rule "Thresh picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Thresh)
 	then
@@ -1678,6 +1797,7 @@ rule "Thresh picked"
 end
 
 rule "Tristana picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Tristana)
 	then
@@ -1692,6 +1812,7 @@ rule "Tristana picked"
 end
 
 rule "Trundle picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Trundle)
 	then
@@ -1706,6 +1827,7 @@ rule "Trundle picked"
 end
 
 rule "Tryndamere picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Tryndamere)
 	then
@@ -1720,6 +1842,7 @@ rule "Tryndamere picked"
 end
 
 rule "TwistedFate picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.TwistedFate)
 	then
@@ -1734,6 +1857,7 @@ rule "TwistedFate picked"
 end
 
 rule "Twitch picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Twitch)
 	then
@@ -1748,6 +1872,7 @@ rule "Twitch picked"
 end
 
 rule "Udyr picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Udyr)
 	then
@@ -1762,6 +1887,7 @@ rule "Udyr picked"
 end
 
 rule "Urgot picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Urgot)
 	then
@@ -1777,6 +1903,7 @@ rule "Urgot picked"
 end
 
 rule "Varus picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Varus)
 	then
@@ -1792,6 +1919,7 @@ rule "Varus picked"
 end
 
 rule "Vayne picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Vayne)
 	then
@@ -1806,6 +1934,7 @@ rule "Vayne picked"
 end
 
 rule "Veigar picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Veigar)
 	then
@@ -1820,6 +1949,7 @@ rule "Veigar picked"
 end
 
 rule "VelKoz picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.VelKoz)
 	then
@@ -1835,6 +1965,7 @@ rule "VelKoz picked"
 end
 
 rule "Vi picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Vi)
 	then
@@ -1849,6 +1980,7 @@ rule "Vi picked"
 end
 
 rule "Viktor picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Viktor)
 	then
@@ -1863,6 +1995,7 @@ rule "Viktor picked"
 end
 
 rule "Vladimir picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Vladimir)
 	then
@@ -1878,6 +2011,7 @@ rule "Vladimir picked"
 end
 
 rule "Volibear picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Volibear)
 	then
@@ -1893,6 +2027,7 @@ rule "Volibear picked"
 end
 
 rule "Warwick picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Warwick)
 	then
@@ -1907,6 +2042,7 @@ rule "Warwick picked"
 end
 
 rule "Wukong picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Wukong)
 	then
@@ -1921,6 +2057,7 @@ rule "Wukong picked"
 end
 
 rule "Xayah picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Xayah)
 	then
@@ -1935,6 +2072,7 @@ rule "Xayah picked"
 end
 
 rule "Xerath picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Xerath)
 	then
@@ -1950,6 +2088,7 @@ rule "Xerath picked"
 end
 
 rule "XinZhao picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.XinZhao)
 	then
@@ -1964,6 +2103,7 @@ rule "XinZhao picked"
 end
 
 rule "Yasuo picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Yasuo)
 	then
@@ -1978,6 +2118,7 @@ rule "Yasuo picked"
 end
 
 rule "Yorick picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Yorick)
 	then
@@ -1993,6 +2134,7 @@ rule "Yorick picked"
 end
 
 rule "Yuumi picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Yuumi)
 	then
@@ -2007,6 +2149,7 @@ rule "Yuumi picked"
 end
 
 rule "Zac picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Zac)
 	then
@@ -2021,6 +2164,7 @@ rule "Zac picked"
 end
 
 rule "Zed picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Zed)
 	then
@@ -2035,6 +2179,7 @@ rule "Zed picked"
 end
 
 rule "Ziggs picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Ziggs)
 	then
@@ -2050,6 +2195,7 @@ rule "Ziggs picked"
 end
 
 rule "Zilean picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Zilean)
 	then
@@ -2065,6 +2211,7 @@ rule "Zilean picked"
 end
 
 rule "Zoe picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Zoe)
 	then
@@ -2080,6 +2227,7 @@ rule "Zoe picked"
 end
 
 rule "Zyra picked"
+salience 20
 	when 
 		$cp: ChampionPick(champion == Champion.Zyra)
 	then

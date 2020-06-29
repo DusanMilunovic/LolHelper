@@ -131,10 +131,10 @@ public class TeamCompositionTests {
 		ChampionSelect championSelect = new ChampionSelect(Position.top);
 		kSession.insert(championSelect);
 		ChampionPick soraka = new ChampionPick(Soraka, false, false);
-		ChampionPick senna = new ChampionPick(Senna, false, false);
+		ChampionPick nami = new ChampionPick(Nami, false, false);
 		ChampionPick vladimir = new ChampionPick(Vladimir, false, false);
 		kSession.insert(soraka);
-		kSession.insert(senna);
+		kSession.insert(nami);
 		kSession.insert(vladimir);
 		kSession.fireAllRules();
 		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.healerheavy));
@@ -147,9 +147,9 @@ public class TeamCompositionTests {
 		ChampionSelect championSelect = new ChampionSelect(Position.top);
 		kSession.insert(championSelect);
 		ChampionPick soraka = new ChampionPick(Soraka, true, false);
-		ChampionPick senna = new ChampionPick(Senna, true, false);
+		ChampionPick nami = new ChampionPick(Nami, true, false);
 		kSession.insert(soraka);
-		kSession.insert(senna);
+		kSession.insert(nami);
 		kSession.fireAllRules();
 		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.healerheavy));
 		assertEquals(1, championSelect.getMyTeamComposition().size());
@@ -183,6 +183,42 @@ public class TeamCompositionTests {
 		kSession.fireAllRules();
 		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.pokeheavy));
 		assertEquals(1, championSelect.getMyTeamComposition().size());
+	}
+	
+	@Test
+	public void enemyTeamFunnelComp() {
+		KieSession kSession = kieContainer.newKieSession();
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, false, false);
+		ChampionPick nami = new ChampionPick(Nami, false, false);
+		ChampionPick soraka = new ChampionPick(Soraka, false, false);
+		kSession.insert(jayce);
+		kSession.insert(nami);
+		kSession.insert(soraka);
+		kSession.fireAllRules();
+		kSession.fireAllRules();
+		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.funnel));
+		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.healerheavy));
+		assertEquals(2, championSelect.getEnemyTeamComposition().size());
+	}
+
+	@Test
+	public void myTeamFunnelComp() {
+		KieSession kSession = kieContainer.newKieSession();
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, true, false);
+		ChampionPick nami = new ChampionPick(Nami, true, false);
+		ChampionPick soraka = new ChampionPick(Soraka, true, false);
+		kSession.insert(jayce);
+		kSession.insert(nami);
+		kSession.insert(soraka);
+		kSession.fireAllRules();
+		kSession.fireAllRules();
+		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.funnel));
+		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.healerheavy));
+		assertEquals(2, championSelect.getMyTeamComposition().size());
 	}
 
 }

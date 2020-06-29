@@ -8,6 +8,7 @@ import com.lolpicker.model.StrongPoint;
 import com.lolpicker.model.CompositionType;
 import com.lolpicker.model.StrongPoint;
 import com.lolpicker.model.CompositionStrongPoint;
+import java.util.List;
 
 
 rule "enemy team, adheavy composition"
@@ -117,6 +118,48 @@ rule "my team, pokeheavy composition"
 		$cs: ChampionSelect(myTeamComposition not contains CompositionType.pokeheavy)
 	then
 		$cs.getMyTeamComposition().add(CompositionType.pokeheavy);
+		update($cs);
+end
+
+query getClasses(List $var, Boolean $myTeam)
+	$var:= List(size > 0) from accumulate(
+		$cp: ChampionPick($classes: classes, myTeam == $myTeam)
+		and
+		$class: Clasz() from $classes,
+		collectList($class)
+	)
+end
+
+query countClasses(List $allClasses, Clasz $class, Number $count)
+	$count:= Number(this >= $count) from accumulate(
+		$found: Clasz(this == $class) from $allClasses,
+		count($found)
+	)
+end
+
+rule "enemy team, funnel composition"
+	no-loop
+	salience 19
+	when
+		$cs: ChampionSelect(enemyTeamComposition not contains CompositionType.funnel)
+		getClasses($classes1, false;)
+		countClasses($classes1, Clasz.adcarry, 1;)
+		countClasses($classes1, Clasz.healer, 2;)
+	then
+		$cs.getEnemyTeamComposition().add(CompositionType.funnel);
+		update($cs);
+end
+
+rule "my team, funnel composition"
+	no-loop
+	salience 19
+	when
+		$cs: ChampionSelect(myTeamComposition not contains CompositionType.funnel)
+		getClasses($classes2, true;)
+		countClasses($classes2, Clasz.adcarry, 1;)
+		countClasses($classes2, Clasz.healer, 2;)
+	then
+		$cs.getMyTeamComposition().add(CompositionType.funnel);
 		update($cs);
 end
 
