@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 import org.apache.maven.shared.invoker.DefaultInvocationRequest;
 import org.apache.maven.shared.invoker.DefaultInvoker;
@@ -19,6 +18,7 @@ import org.drools.template.objects.ArrayDataProvider;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.lolpicker.HeroPickerSpringApplication;
@@ -32,12 +32,9 @@ import com.lolpicker.model.Position;
 @Service
 public class LolService {
 
-	private final KieContainer kieContainer;
-
 	@Autowired
-	public LolService(KieContainer kieContainer, KieSession kieSession) {
-		this.kieContainer = kieContainer;
-	}
+	@Qualifier("heroPickerContainer")
+	private KieContainer kieContainer;
 
 	
 	public ChampionSelectAndPicksDto getPicks(ArrayList<ChampionPick> championPicks, Position position) {

@@ -15,8 +15,8 @@ public class HeroPickerSpringApplication {
 		SpringApplication.run(HeroPickerSpringApplication.class, args);
 	}
 
-	@Bean
-	public KieContainer kieContainer() {
+	@Bean(name="heroPickerContainer")
+	public KieContainer kieContainerHeroPicker() {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks
 				.newKieContainer(ks.newReleaseId("com.lolpicker", "HeroPickerKjar", "0.0.1-SNAPSHOT"));
@@ -25,8 +25,8 @@ public class HeroPickerSpringApplication {
 		return kContainer;
 	}
 
-	@Bean
-	public KieSession kieSession() {
+	@Bean(name="heroPickerSession")
+	public KieSession kieSessionHeroPicker() {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks
 				.newKieContainer(ks.newReleaseId("com.lolpicker", "HeroPickerKjar", "0.0.1-SNAPSHOT"));
@@ -35,4 +35,26 @@ public class HeroPickerSpringApplication {
 		KieSession kSession = kContainer.newKieSession();
 		return kSession; 
 	}
+
+	@Bean(name="relationshipsContainer")
+	public KieContainer kieContainerRelationships() {
+		KieServices ks = KieServices.Factory.get();
+		KieContainer kContainer = ks
+				.newKieContainer(ks.newReleaseId("com.lolpicker", "HeroRelationsKjar", "0.0.1-SNAPSHOT"));
+		KieScanner kScanner = ks.newKieScanner(kContainer);
+		kScanner.start(10_000);
+		return kContainer;
+	}
+
+	@Bean(name="relationshipsSession")
+	public KieSession kieSessionRelationships() {
+		KieServices ks = KieServices.Factory.get();
+		KieContainer kContainer = ks
+				.newKieContainer(ks.newReleaseId("com.lolpicker", "HeroRelationsKjar", "0.0.1-SNAPSHOT"));
+		KieScanner kScanner = ks.newKieScanner(kContainer);
+		kScanner.start(10_000);
+		KieSession kSession = kContainer.newKieSession();
+		return kSession; 
+	}
+
 }

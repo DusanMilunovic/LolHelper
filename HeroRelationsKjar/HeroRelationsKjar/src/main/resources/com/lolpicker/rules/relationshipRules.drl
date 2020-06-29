@@ -1,0 +1,63 @@
+package com.lolpicker.rules;
+
+import com.lolpicker.model.Enemy;
+import com.lolpicker.model.Friend;
+import com.lolpicker.model.CheckRelationship;
+
+rule "friends"
+	salience 1000/retValDepth
+	when
+		$cr: CheckRelationship($ch1: champion1, $ch2: champion2, relationship == "None")
+		isFriendWith($ch1, $ch2, retVal, 1, retValDepth;)
+	then
+		System.out.println("fren");
+		System.out.println(retValDepth);
+		$cr.setRelationship("Friends");
+		update($cr);
+end
+
+rule "enemies"
+	salience 1000/retValDepth
+	when
+		$cr: CheckRelationship($ch1: champion1, $ch2: champion2, relationship == "None")
+		isEnemyWith($ch1, $ch2, retVal, 1, retValDepth;)
+	then
+		System.out.println("enemy");
+		System.out.println(retValDepth);
+		$cr.setRelationship("Enemies");
+		update($cr);
+end
+
+query isFriendWith( String child, String parent, Friend retVal, Number depth, Number retValDepth)
+  (retVal := Friend( child, parent;) and
+  retValDepth := Number(intValue == depth))
+  or
+  (Friend(z, parent;)
+  and
+  depth2 := Number(intValue == depth + 1)
+  and
+  isFriendWith( child, z, retVal, depth2, retValDepth; ) )
+  or 
+  (Enemy(z, parent;)
+  and
+  depth3 := Number(intValue == depth + 1)
+  and
+  isEnemyWith( child, z, retVal, depth3, retValDepth; ) )
+end
+
+query isEnemyWith( String child, String parent, Friend retVal, Number depth, Number retValDepth)
+  (retVal := Enemy( child, parent;) and
+  retValDepth := Number(intValue == depth))
+  or
+  (Enemy(z, parent;)
+  and
+  depth2 := Number(intValue == depth + 1)
+  and
+  isFriendWith( child, z, retVal, depth2, retValDepth; ) )
+  or 
+  (Friend(z, parent;)
+  and
+  depth3 := Number(intValue == depth + 1)
+  and
+  isEnemyWith( child, z, retVal, depth3, retValDepth; ) )
+end

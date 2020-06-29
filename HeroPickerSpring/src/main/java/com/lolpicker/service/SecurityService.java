@@ -2,6 +2,7 @@ package com.lolpicker.service;
 
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.lolpicker.model.RequestIp;
@@ -9,12 +10,9 @@ import com.lolpicker.model.RequestIp;
 @Service
 public class SecurityService {
 
-	private final KieSession securitySession;
-
 	@Autowired
-	public SecurityService(KieSession kieSession) {
-		this.securitySession = kieSession;
-	}
+	@Qualifier("heroPickerSession")
+	private KieSession securitySession;
 	
 	public boolean checkSpam(String ipAddress) {
 		RequestIp ri = new RequestIp(ipAddress);
