@@ -5,19 +5,19 @@ import com.lolpicker.model.Friend;
 import com.lolpicker.model.CheckRelationship;
 
 rule "friends"
-	salience 1000/retValDepth
+	salience 100/retValDepth
 	when
 		$cr: CheckRelationship($ch1: champion1, $ch2: champion2, relationship == "None")
 		isFriendWith($ch1, $ch2, retVal, 1, retValDepth;)
 	then
-		System.out.println("fren");
+		System.out.println("friend");
 		System.out.println(retValDepth);
 		$cr.setRelationship("Friends");
 		update($cr);
 end
 
 rule "enemies"
-	salience 1000/retValDepth
+	salience 100/retValDepth
 	when
 		$cr: CheckRelationship($ch1: champion1, $ch2: champion2, relationship == "None")
 		isEnemyWith($ch1, $ch2, retVal, 1, retValDepth;)

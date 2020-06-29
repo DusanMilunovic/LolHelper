@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.lolpicker.service.RelationshipService;
+
 @SpringBootApplication
 public class HeroPickerSpringApplication {
 
@@ -54,6 +56,7 @@ public class HeroPickerSpringApplication {
 		KieScanner kScanner = ks.newKieScanner(kContainer);
 		kScanner.start(10_000);
 		KieSession kSession = kContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 100);
 		return kSession; 
 	}
 

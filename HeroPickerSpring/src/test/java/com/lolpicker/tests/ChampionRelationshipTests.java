@@ -1,5 +1,7 @@
 package com.lolpicker.tests;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.kie.api.KieServices;
@@ -9,6 +11,7 @@ import org.kie.api.runtime.KieSession;
 import com.lolpicker.model.CheckRelationship;
 import com.lolpicker.model.Enemy;
 import com.lolpicker.model.Friend;
+import com.lolpicker.service.RelationshipService;
 
 public class ChampionRelationshipTests {
 
@@ -25,34 +28,82 @@ public class ChampionRelationshipTests {
 	@Test
 	public void friendsTest() {
 		KieSession kSession = kieContainer.newKieSession();
-		Friend f1 = new Friend("Aatrox", "Mordekaiser");
-		Friend f4 = new Friend("Mordekaiser", "Hlebio");
-		Friend f5 = new Friend("Hlebio", "Marku");
-		Friend f9 = new Friend("Marku", "zec");
-		Friend f6 = new Friend("Marku", "rku");
-		Friend f7 = new Friend("Marku", "dlfkjs");
-		Friend f8 = new Friend("Marku", "lk");
-		Friend f10 = new Friend("Marku", "Volibear");
-		Enemy f2 = new Enemy("Hlebio", "Amumu");
-		Friend f3 = new Friend("Amumu", "Krom");
-		Friend f11 = new Friend("Krom", "Volibear");
-		int maxDepth = 20;
-		for (int i = 0; i < maxDepth; i++) {
-			kSession.insert(i);
-		}
-		kSession.insert(new CheckRelationship("Aatrox", "Volibear"));
-		kSession.insert(f1);
-		kSession.insert(f4);
-		kSession.insert(f5);
-		kSession.insert(f6);
-		kSession.insert(f7);
-		kSession.insert(f8);
-		kSession.insert(f9);
-		kSession.insert(f2);
-		kSession.insert(f3);
-		kSession.insert(f10);
-		kSession.insert(f11);
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr = new CheckRelationship("Garen", "Lux");
+		kSession.insert(cr);
 		kSession.fireAllRules();
+		assertTrue(cr.getRelationship().equals("Friends"));
 	}
 
+	@Test
+	public void enemiesTest() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr = new CheckRelationship("Riven", "Yasuo");
+		kSession.insert(cr);
+		kSession.fireAllRules();
+		assertTrue(cr.getRelationship().equals("Enemies"));
+	}
+	
+	@Test
+	public void enemyTriangleTest() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr1 = new CheckRelationship("Mordekaiser", "LeBlanc");
+		kSession.insert(cr1);
+		kSession.fireAllRules();
+		assertTrue(cr1.getRelationship().equals("Enemies"));
+		CheckRelationship cr2 = new CheckRelationship("Mordekaiser", "Vladimir");
+		kSession.insert(cr2);
+		kSession.fireAllRules();
+		assertTrue(cr2.getRelationship().equals("Friends"));
+	}
+
+	@Test
+	public void indirectFriendsTest() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr = new CheckRelationship("Garen", "Shyvana");
+		kSession.insert(cr);
+		kSession.fireAllRules();
+		assertTrue(cr.getRelationship().equals("Friends"));
+	}
+
+	@Test
+	public void indirectEnemiesTest() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr1 = new CheckRelationship("Rakan", "Zed");
+		kSession.insert(cr1);
+		kSession.fireAllRules();
+		assertTrue(cr1.getRelationship().equals("Enemies"));
+		CheckRelationship cr2 = new CheckRelationship("Zed", "Akali");
+		kSession.insert(cr2);
+		kSession.fireAllRules();
+		assertTrue(cr2.getRelationship().equals("Enemies"));
+	}
+	
+	@Test
+	public void enemyOfMyFriend() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr1 = new CheckRelationship("Illaoi", "MissFortune");
+		kSession.insert(cr1);
+		kSession.fireAllRules();
+		assertTrue(cr1.getRelationship().equals("Enemies"));
+		CheckRelationship cr2 = new CheckRelationship("Rumble", "Caitlyn");
+		kSession.insert(cr2);
+		kSession.fireAllRules();
+		assertTrue(cr2.getRelationship().equals("Enemies"));
+	}
+
+	@Test
+	public void enemyOfMyEnemy() {
+		KieSession kSession = kieContainer.newKieSession();
+		RelationshipService.populateRelations(kSession, 6);
+		CheckRelationship cr1 = new CheckRelationship("Anivia", "Ashe");
+		kSession.insert(cr1);
+		kSession.fireAllRules();
+		assertTrue(cr1.getRelationship().equals("Friends"));
+	}
 }
