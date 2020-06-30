@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeroPickerFront"
         mc:Ignorable="d"
-        Title="MainWindow" Height="520" Width="350">
+        Title="LolHelper" Height="520" Width="350">
     <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -24,8 +24,11 @@
             </Grid.ColumnDefinitions>
         <TextBox AcceptsReturn="True" TextWrapping="Wrap" />
         <Menu Grid.ColumnSpan="3" Grid.Row="0">
-            <MenuItem Header="_File">
+            <MenuItem Header="_Rules">
                 <MenuItem Header="_Add custom team compositions" Click="EditDroolsFiles_Click" Name="EditDroolsFiles"/>
+            </MenuItem>
+            <MenuItem Header="_Relationships">
+                <MenuItem Header="_Check a relationship between two heroes " Click="Relationship_Click" Name="Relationship"/>
             </MenuItem>
         </Menu>
         <Button Grid.Column="0" Grid.Row="1" Name="Button0" Click="ButtonClick">

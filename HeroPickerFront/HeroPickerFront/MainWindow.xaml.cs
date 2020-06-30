@@ -526,5 +526,14 @@ namespace HeroPickerFront
             // Open the dialog box modally
             dlg.ShowDialog();
         }
+
+        private void Relationship_Click(object sender, RoutedEventArgs e)
+        {
+            CheckRelationshipsDialog dlg = new CheckRelationshipsDialog();
+            dlg.Owner = this;
+
+            // Open the dialog box modally
+            dlg.ShowDialog();
+        }
     }
 }

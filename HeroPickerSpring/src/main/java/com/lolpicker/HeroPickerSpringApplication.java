@@ -56,7 +56,7 @@ public class HeroPickerSpringApplication {
 		KieScanner kScanner = ks.newKieScanner(kContainer);
 		kScanner.start(10_000);
 		KieSession kSession = kContainer.newKieSession();
-		RelationshipService.populateRelations(kSession, 100);
+		RelationshipService.populateRelations(kSession, 6);
 		return kSession; 
 	}
 

@@ -78,6 +78,9 @@
     <Compile Include="ChampionPicksAndChampionSelect.cs" />
     <Compile Include="ChampionPicksAndPosition.cs" />
     <Compile Include="ChampionPicksTurnAndPosition.cs" />
+    <Compile Include="CheckRelationshipsDialog.xaml.cs">
+      <DependentUpon>CheckRelationshipsDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientCommunicator.cs" />
     <Compile Include="CompositionRule.cs" />
     <Compile Include="EditDroolsFilesDialog.xaml.cs">
@@ -88,6 +91,10 @@
     <Compile Include="ResponseModel.cs" />
     <Compile Include="WindowSnapper.cs" />
     <Page Include="ChampionInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CheckRelationshipsDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
