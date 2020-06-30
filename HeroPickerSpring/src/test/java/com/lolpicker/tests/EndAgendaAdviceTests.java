@@ -156,7 +156,7 @@ public class EndAgendaAdviceTests {
 		kSession.fireAllRules();
 		kSession.getAgenda().getAgendaGroup("end").setFocus();
 		kSession.fireAllRules();
-		assertTrue(contains(championSelect.getCompositionCountersAdvice(), "Enemy team composition contains multiple ad champions and your champion is a tank. Build Zhonya's hourglass as your 3rd or 4th item to increase survivability."));
+		assertTrue(contains(championSelect.getCompositionCountersAdvice(), "Enemy team composition contains multiple ad champions and your champion is an ap carry. Build Zhonya's hourglass as your 3rd or 4th item to increase survivability."));
 	}
 
 	@Test
@@ -333,5 +333,22 @@ public class EndAgendaAdviceTests {
 		kSession.getAgenda().getAgendaGroup("end").setFocus();
 		kSession.fireAllRules();
 		assertTrue(contains(championSelect.getCompositionCountersAdvice(), "Enemy team composition contains multiple poke champions and your champion is an ap carry. Build Banshee's Veil to neglect some of their spells."));
+	}
+
+	@Test
+	public void enemyFunnelComp() {
+		KieSession kSession = kieContainer.newKieSession();
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, false, false);
+		ChampionPick nami = new ChampionPick(Nami, false, false);
+		ChampionPick soraka = new ChampionPick(Soraka, false, false);
+		kSession.insert(jayce);
+		kSession.insert(nami);
+		kSession.insert(soraka);
+		kSession.fireAllRules();
+		kSession.getAgenda().getAgendaGroup("end").setFocus();
+		kSession.fireAllRules();
+		assertTrue(contains(championSelect.getCompositionCountersAdvice(), "Enemy team has a funnel composition. That means that one person will be the main carry and the others will support him. Try to kill the carry to win team fights."));
 	}
 }

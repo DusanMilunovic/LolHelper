@@ -197,7 +197,6 @@ public class TeamCompositionTests {
 		kSession.insert(nami);
 		kSession.insert(soraka);
 		kSession.fireAllRules();
-		kSession.fireAllRules();
 		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.funnel));
 		assertTrue(championSelect.getEnemyTeamComposition().contains(CompositionType.healerheavy));
 		assertEquals(2, championSelect.getEnemyTeamComposition().size());
@@ -214,7 +213,6 @@ public class TeamCompositionTests {
 		kSession.insert(jayce);
 		kSession.insert(nami);
 		kSession.insert(soraka);
-		kSession.fireAllRules();
 		kSession.fireAllRules();
 		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.funnel));
 		assertTrue(championSelect.getMyTeamComposition().contains(CompositionType.healerheavy));

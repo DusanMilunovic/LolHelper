@@ -1,37 +1,6 @@
 package com.lolpicker.tests;
 
-import static com.lolpicker.model.Champion.Aatrox;
-import static com.lolpicker.model.Champion.Annie;
-import static com.lolpicker.model.Champion.Ashe;
-import static com.lolpicker.model.Champion.Azir;
-import static com.lolpicker.model.Champion.ChoGath;
-import static com.lolpicker.model.Champion.DrMundo;
-import static com.lolpicker.model.Champion.Galio;
-import static com.lolpicker.model.Champion.Heimerdinger;
-import static com.lolpicker.model.Champion.Janna;
-import static com.lolpicker.model.Champion.Jayce;
-import static com.lolpicker.model.Champion.Jinx;
-import static com.lolpicker.model.Champion.Katarina;
-import static com.lolpicker.model.Champion.Kled;
-import static com.lolpicker.model.Champion.KogMaw;
-import static com.lolpicker.model.Champion.Lissandra;
-import static com.lolpicker.model.Champion.Lulu;
-import static com.lolpicker.model.Champion.Malphite;
-import static com.lolpicker.model.Champion.Maokai;
-import static com.lolpicker.model.Champion.Nautilus;
-import static com.lolpicker.model.Champion.Nidalee;
-import static com.lolpicker.model.Champion.Orianna;
-import static com.lolpicker.model.Champion.Ornn;
-import static com.lolpicker.model.Champion.Poppy;
-import static com.lolpicker.model.Champion.Rammus;
-import static com.lolpicker.model.Champion.Sejuani;
-import static com.lolpicker.model.Champion.Senna;
-import static com.lolpicker.model.Champion.Soraka;
-import static com.lolpicker.model.Champion.Syndra;
-import static com.lolpicker.model.Champion.Varus;
-import static com.lolpicker.model.Champion.Vayne;
-import static com.lolpicker.model.Champion.Vladimir;
-import static com.lolpicker.model.Champion.Yasuo;
+import static com.lolpicker.model.Champion.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -171,6 +140,28 @@ public class TeamCompositionCountersTests {
 		assertTrue(champions.contains(Lulu));
 		assertTrue(champions.contains(Nidalee));
 		assertTrue(champions.contains(Vladimir));
+	}
+
+	@Test
+	public void funnelComp() {
+		KieSession kSession = kieContainer.newKieSession();
+		ChampionSelect championSelect = new ChampionSelect(Position.top);
+		kSession.insert(championSelect);
+		ChampionPick jayce = new ChampionPick(Jayce, false, false);
+		ChampionPick nami = new ChampionPick(Nami, false, false);
+		ChampionPick soraka = new ChampionPick(Soraka, false, false);
+		kSession.insert(jayce);
+		kSession.insert(nami);
+		kSession.insert(soraka);
+		kSession.fireAllRules();
+		assertTrue(championSelect.getCompositionCounters().containsKey("funnel"));
+		ArrayList<Champion> champions = championSelect.getCompositionCounters().get("funnel"); 
+		assertEquals(12, champions.size());
+		assertTrue(champions.contains(Olaf));
+		assertTrue(champions.contains(Kled));
+		assertTrue(champions.contains(Wukong));
+		assertTrue(champions.contains(LeeSin));
+		assertTrue(champions.contains(Irelia));
 	}
 
 }

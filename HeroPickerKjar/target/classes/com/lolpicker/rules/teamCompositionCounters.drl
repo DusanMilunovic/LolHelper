@@ -138,3 +138,24 @@ rule "enemy team poke comp"
 		champions.add(Champion.Warwick);
 		$cs.getCompositionCounters().put("pokeheavy", champions);
 end
+
+rule "enemy team funnel comp"
+	salience -1
+	when 
+		$cs: ChampionSelect(enemyTeamComposition contains CompositionType.funnel)
+	then
+		ArrayList<Champion> champions = new ArrayList<>();
+		champions.add(Champion.Olaf);
+		champions.add(Champion.Kled);
+		champions.add(Champion.Wukong);
+		champions.add(Champion.LeeSin);
+		champions.add(Champion.Irelia);
+		champions.add(Champion.Camille);
+		champions.add(Champion.Kayn);
+		champions.add(Champion.Azir);
+		champions.add(Champion.Blitzcrank);
+		champions.add(Champion.Pantheon);
+		champions.add(Champion.Malphite);
+		champions.add(Champion.Warwick);
+		$cs.getCompositionCounters().put("funnel", champions);
+end
